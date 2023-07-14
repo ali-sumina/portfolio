@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Projects } from '../interfaces/projectslist.interface';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-project',
@@ -14,13 +15,14 @@ export class ProjectComponent implements OnInit {
   projectImg:string = "attributes.ProjectDescription";
   projectDesc: string = "attributes.ProjectImage.data.attributes.formats.medium.url";
   localHost:string = 'http://localhost:1337'
+  serverURL = environment.server;
 
   constructor (private http: HttpClient) {}
 
 
   ngOnInit(): void {
     // throw new Error('Method not implemented.');
-    this.http.get<Projects>('http://localhost:1337/api/projects?populate=*').subscribe (res => {
+    this.http.get<Projects>(this.serverURL + '/api/projects?populate=*').subscribe (res => {
       console.log (res)
       this.projects = res.data;
       // this.projectTitle = ;

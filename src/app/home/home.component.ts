@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NavPage } from '../interfaces/nav-age.interface';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,7 @@ import { NavPage } from '../interfaces/nav-age.interface';
 export class HomeComponent implements OnInit{
 
   title = 'portfolio';
+  serverURL = environment.server;
 
   navPage:any;
   phoneNum:string = '';
@@ -32,7 +34,7 @@ export class HomeComponent implements OnInit{
   constructor (private http:HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get<NavPage>('http://localhost:1337/api/page-nav?populate=*').subscribe(res => {
+    this.http.get<NavPage>(this.serverURL + '/api/page-nav?populate=*').subscribe(res => {
       console.log(res)
       this.navPage = res
       this.phoneNum = res.data.attributes.PhoneNumber;
@@ -46,9 +48,9 @@ export class HomeComponent implements OnInit{
     })
   }
 
-  hideAppRoot() {
-    console.log("Works")
-    this.homeNav = 'hide';
-    this.mainNav = 'show';
-}
+//   hideAppRoot() {
+//     console.log("Works")
+//     this.homeNav = 'hide';
+//     this.mainNav = 'show';
+// }
 }

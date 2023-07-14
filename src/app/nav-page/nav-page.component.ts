@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NavPage } from '../interfaces/nav-age.interface';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-nav-page',
@@ -19,13 +20,14 @@ export class NavPageComponent implements OnInit {
   linkedinIcon:string = '';
   logo:string = '';
   localHost:string = 'http://localhost:1337';
+  serverURL = environment.server;
 
 
 
   constructor (private http:HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get<NavPage>('http://localhost:1337/api/page-nav?populate=*').subscribe(res => {
+    this.http.get<NavPage>(this.serverURL + '/api/page-nav?populate=*').subscribe(res => {
       console.log(res)
       this.navPage = res
       this.phoneNum = res.data.attributes.PhoneNumber;
