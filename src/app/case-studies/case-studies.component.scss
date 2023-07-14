@@ -1,0 +1,17 @@
+@import '../../styles.scss';
+// @import '../project/project.component.scss';
+
+// h1{
+// //     @include h1;
+// // }
+
+    
+@media screen and (max-width: 562px)  {
+.hide{
+    display: none;
+}
+
+.show {
+    display: block;
+}
+}

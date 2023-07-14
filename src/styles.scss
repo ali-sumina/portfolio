@@ -1,1 +1,205 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+//VARS
+
+$darkGrey: #333;
+$lightCream: #FFFCF3;
+$border: 4px solid $darkGrey;
+$florenceBlack: Florencesans Black;
+$florenceSans: Florencesans;
+$contentFont: Avenir Next;
+
+// FLEX
+@mixin fullCenter () {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+@mixin basicFlex () {
+    display: flex;
+    align-items: center;
+}
+
+@mixin startFlex ($direction, $align) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+}
+
+// TEXT
+@mixin h1(){
+    font-size: 48px;
+    font-family: $florenceBlack;
+    text-transform: uppercase;
+}
+
+@mixin h2() {
+    font-size: 36px;
+    font-family: $florenceBlack;
+    color: $darkGrey;
+    text-transform: uppercase;
+    line-height: 136%;
+}
+
+@mixin h2-title($fontFamily, $fontStyle) {
+    font-size: 36px;
+    font-family: $fontFamily;
+    color: $darkGrey;
+    text-transform: uppercase;
+    font-style: $fontStyle;
+
+}
+
+@mixin h3 (){
+    color: $darkGrey;
+    font-size: 28px;
+    font-family: Florencesans;
+    font-weight: 700;
+    line-height: 130%;
+    text-transform: uppercase;
+}
+
+@mixin h4() {
+    color: $darkGrey;
+    font-size: 24px;
+    font-family: $florenceSans;
+    font-weight: 700;
+}
+
+@mixin h5() {
+    color: $darkGrey;
+    font-size: 20px;
+    font-family: $florenceSans;
+    font-weight: 700;
+}
+
+@mixin content-text () {
+    color: $darkGrey;
+    font-size: 18px;
+    font-family: $contentFont;
+    line-height: 160%;
+}
+
+@mixin small-text ($color){
+    color: $color;
+    font-size: 1 rem;
+    font-family: $contentFont;
+    line-height: 160%;
+}
+
+// Text Tags
+
+h1{
+    @include h1();
+}
+
+h2{
+    @include h2();
+}
+
+h3{
+    @include h3();
+}
+
+h4{
+    @include h4();
+}
+
+h5{
+    @include h5();
+}
+
+.content {
+    @include content-text();
+}
+
+.small-text{
+    @include small-text($darkGrey);
+    opacity: 0.5;
+}
+
+
+
+// BUTTONS
+
+@mixin buttonText ($color) {
+    text-align: center;
+    font-size: 18px;
+    font-family: $florenceBlack;
+    text-transform: uppercase;
+    color: $color;
+}
+
+@mixin darkButton () {
+    background-color: $darkGrey;
+    padding: 10px 20px;
+    border-radius: 0px;
+    @include buttonText($lightCream);
+    .hover{
+        background-color: #4F4F4F;
+    }
+}
+
+@mixin lightButton() {
+    padding: 10px 20px;
+    border: $border;
+    border-radius: 0px;
+    @include buttonText($darkGrey);
+    .hover{
+        background-color: $darkGrey;
+        @include buttonText($lightCream);
+    }
+}
+
+
+// Button Tags
+
+.dark-btn{
+    @include darkButton();
+}
+
+.light-btn {
+    @include lightButton()
+}
+
+// DESKTOP
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+
+// 
+
+body{
+    background-color: $lightCream;
+    // margin-top: 32px;
+    // padding-bottom: 16px;
+    background-image: url(assets/bglines.svg);
+    // overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+
+
+
+// @media screen and (max-width: 562px) {
+
+// }
+
+// MOBILE
+
+@media screen and (max-width: 562px) {
+    h1{
+        @include h2();
+    }
+
+    h2{
+        @include h1();
+    }
+}

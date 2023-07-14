@@ -1,0 +1,175 @@
+<!-- NAV -->
+<!-- Write a condition to hide page nav -->
+
+<div class="container-fluid screen" [class]="homeNav" >
+    <div class="row">
+      <div class="space-between">
+      <div class="img-container">
+        <!-- put this logo into assets -->
+        <a routerLink="/">
+        <img src="../assets/logo.svg" alt="" class="logo-nav">
+      </a>
+      </div>
+  
+      <div class="socmedia-resume">
+        <div class="soc-icons">
+          <img src="../assets/linkedin.svg" alt="" class="soc-icon">
+          <img src="../assets/behance.svg" alt="" class="soc-icon">
+          <img src="../assets/instagram.svg" alt="" class="soc-icon">
+        </div>
+        <button class="btn light-btn">Download Resume</button>
+      </div>
+      </div>
+  
+    </div>
+  
+    <div class="row">
+      <div class="space">
+        <div class="welcome-message">
+          <h2 class="border-bottom"><span class="regularh2">My name is</span> Alexandra Sumina, <span class="italich2">and I’m a</span> UI/UX Designer.</h2>
+  
+          <div class="bottom-part">
+            <h4 class="pb-2">Contact Me To Hire:</h4>
+            <div class="icon-contact">
+                <!-- STRAPI! Loop this info -->
+                <img class="nav-icon" src="{{localHost + emailIcon}}" alt="">
+                <p class="content">{{email}}</p>
+            </div>
+            <div class="icon-contact">
+                <!-- STRAPI! Loop this info -->
+                <img class="nav-icon" src="{{localHost + phoneIcon}}" alt="">
+                <p class="content">{{phoneNum}}</p>
+            </div>
+        </div>
+      </div>
+        <div class="signage hide">
+          <img src="../../assets/menu-point.svg" alt="" class="point">
+          <p class="content">– hover to explore my website world</p>
+        </div>
+      
+    </div>
+  
+  </div>
+  
+  <div class="map">
+    <div class="point-nav">
+      <div class="projects">
+      <a routerLink="/projects" (click)="hideAppRoot()">
+        <h5 class="point-text">Projects</h5>
+      <div class="point-icon">
+        <img src="../../assets/menu-point.svg" alt="" class="point">
+      </div>
+    </a>
+    </div>
+  
+      <div class="point-nav">
+        <div class="about">
+          <a routerLink="/about">
+        <h5 class="point-text">About Me</h5>
+        <div class="point-icon">
+          <img src="../../assets/menu-point.svg" alt="" class="point">
+        </div>
+      </a>
+      </div>
+  
+        <div class="point-nav">
+          <div class="funstuff">
+          <h5 class="point-text">Fun Stuff</h5>
+          <div class="point-icon">
+            <img src="../../assets/menu-point.svg" alt="" class="point">
+          </div>
+        </div>
+  
+    </div>
+  </div>
+  </div>
+  </div>
+  <router-outlet></router-outlet>
+  </div>
+  
+  
+  <!-- SECOND NAV -->
+  <!-- <div class="container-fluid" [class]="mainNav">
+    <div class="row">
+      <div class="col-md-3">
+  <nav class="pageNav">
+    <div class="container-fluid column-flex py-5">
+        <div class="top-part">
+        <a routerLink="/home" class="logo-home"> -->
+            <!-- Upload Logo to Strapi -->
+            <!-- <img src="../../assets/logo.svg" alt="" class="logo">
+        </a>
+        <ul class="nav-list mt-5">
+  
+            <li class="nav-item">
+                <a routerLink="/about">
+                    <h3>About</h3>
+                </a>
+            </li> -->
+  <!-- 
+            <li class="nav-item">
+                <a routerLink="/contacts">
+                    <h3>Contacts</h3>
+                </a>
+            </li> -->
+<!--   
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <h3>Projects</h3>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" routerLink="/projects/case-studies">
+                        <h5>Case Studies</h5>
+                    </a>
+                </li>
+                    <li><a class="dropdown-item" routerLink="/case-studies">
+                        <h5>UI & Web Design</h5>
+                    </a>
+                </li>
+                    <li><a class="dropdown-item" routerLink="/case-studies">
+                        <h5>Graphic Design</h5>
+                    </a>
+                </li>
+  
+                  </ul>
+            </li>
+        </ul>
+    </div>
+   -->
+        <!-- <div class="bottom-part">
+        <h4>Contact Me To Hire:</h4>
+        <div class="icon-contact mt-3"> -->
+            <!-- STRAPI! Loop this info -->
+            <!-- <img class="nav-icon" src="{{localHost + emailIcon}}" alt="">
+            <p class="content">{{email}}</p>
+        </div>
+        <div class="icon-contact mt-3"> -->
+            <!-- STRAPI! Loop this info -->
+            <!-- <img class="nav-icon" src="{{localHost + phoneIcon}}" alt="">
+            <p class="content">{{phoneNum}}</p>
+        </div>
+  
+        <div class="social-icons">
+            <a href="" class="soc-link">
+                <img src="../../assets/linkedin.svg" alt="" class="soc-icon">
+            </a>
+            <a href="" class="soc-link">
+                <img src="../../assets/behance.svg" alt="" class="soc-icon">
+            </a>
+            <a href="" class="soc-link">
+                <img src="../../assets/instagram.svg" alt="" class="soc-icon">
+            </a>
+  
+        </div> -->
+  
+        <!-- Should be downloadable -->
+        <!-- <button class="btn light-btn mt-5">Download Resume</button> -->
+    <!-- </div>
+  </div>
+  </nav>
+  </div>
+  <div class="col-md-9">
+    <router-outlet></router-outlet>
+  </div>
+  </div>
+  </div> -->

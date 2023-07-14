@@ -1,0 +1,80 @@
+<!-- <p>
+    {{ aboutText }}
+    {{ headShot }}
+</p> -->
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 fixed-left">
+            <app-nav-page></app-nav-page>
+        </div>
+        <div class="col-md-9">
+            <!-- ABOUT ME TEXT PIC -->
+            <div class="container">
+                <div class="row">
+                    <h1 class="mb-5">About Me</h1>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-md-6" >
+                        <h3 class="mb-4">Passionate to explore</h3>
+                        <div class="content">{{ aboutText }}</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="headshot">
+                            <img [src]="headShot">
+                        </div>
+                    </div>
+                </div>
+
+            <!-- WORK EXPERIENCE / EDUCATION -->
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Work EXPERIENCE -->
+                    <h3 class="mb-5">Work Experience</h3>
+                    <!-- ngFor -->
+                    <div class="work-exp" *ngFor="let p of positions">
+                        <div class="position-year">
+                            <div class="position">
+                                <img src="../../assets/work.svg" alt="" class="work-icon">
+                                <div class="position-company">
+                                <h5 class="mb-2">{{p.attributes.Position}}</h5>
+                                <p class="small-text">{{p.attributes.WorkPlace}}</p>
+                            </div>
+                            </div>
+                            <div class="year">
+                                <p class="small-text">{{p.attributes.WorkTime}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <!-- Education -->
+                    <h3 class="mb-5">Education</h3>
+                    <!-- ngFor -->
+                    <div class="work-exp" *ngFor="let e of educations">
+                        <div class="position-year">
+                            <div class="position">
+                                <img src="../../assets/edu.svg" alt="" class="work-icon">
+                                <div class="position-company">
+                                <h5 class="mb-2">{{e.attributes.EduLevel}}</h5>
+                                <p class="small-text">{{e.attributes.University}}</p>
+                            </div>
+                            </div>
+                            <div class="year">
+                                <p class="small-text">{{e.attributes.EduYears}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            </div>
+
+            
+
+        </div>
+    </div>
+</div>
+

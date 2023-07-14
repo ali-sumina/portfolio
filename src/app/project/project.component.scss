@@ -1,0 +1,42 @@
+@import '../../styles.scss';
+
+.hide{
+    display: none;
+}
+
+.projContainer{
+    height: 375px;
+    border: 4px solid $darkGrey;
+    .row{
+        height: 100%;
+    }
+    .text{
+        padding-left: 30px;
+        display: flex;
+        align-items: center;
+        .content{
+            @include content-text();
+        }
+    }
+
+    .img{
+        // background-image: url({{projectImg}});
+        // // background-color: grey;
+        height: 100%;
+        border-left: $border;
+    }
+    
+}
+
+@media screen and (max-width: 562px)  {
+
+    // HIDE / SHOW
+
+
+
+    .projContainer{
+        .img{
+            border-left: 0px;
+        }
+    }
+}
