@@ -11,6 +11,8 @@
 }
 
 .screen{
+    background-image: url(../../assets/bglines.svg);
+    padding: 32px;
     height: 100vh;
     @include startFlex(column, stretch);
     justify-content: space-between;
@@ -82,50 +84,77 @@
 .map{
     background-image: url(../../assets/map.svg);
     position: absolute;
-    height: 932px;
+    height: 913px;
     width: 1230px;
-    left: 357px;
+    background-size: 120%;
+    left: 335px;
+    bottom: 76px;
     .point-nav{
-        
+
         .projects{
             position: relative;
-            top: 347px;
+            top: 301px;
+            left: 633px;
+        }
+        
+        .case-studies{
+            position: relative;
+            top: 426px;
+            right: 70px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            .point-text{
-                padding: 10px 20px;
-                border: $border;
-                background-color: $lightCream;
+            .point-link{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
-
         }
+
+        .web-design{
+            position: relative;
+            top: 410px;
+            left: 171px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .point-link{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+
+
+
+
         .about{
             position: relative;
-            top: 457px;
-            left: 167px;
+            top: 484px;
+            left: 386px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            .point-text{
-                padding: 10px 20px;
-                border: $border;
-                background-color: $lightCream;
+            .point-link{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
 
         }
         .funstuff{
             position: relative;
-            top: 427px;
-            right: 159px;
+            top: 557px;
+            right: 73px;
             display: flex;
         flex-direction: column;
         align-items: center;
-            .point-text{
-                padding: 10px 20px;
-                border: $border;
-                background-color: $lightCream;
-            }
+            .point-link{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+        }
 
         }
 

@@ -180,9 +180,13 @@ body{
     background-color: $lightCream;
     // margin-top: 32px;
     // padding-bottom: 16px;
-    background-image: url(assets/bglines.svg);
+    // background-image: url(assets/bglines.svg);
     // overflow-y: hidden;
     overflow-x: hidden;
+}
+
+.fixed {
+    position: fixed;
 }
 
 

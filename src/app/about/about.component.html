@@ -6,12 +6,14 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-3 fixed-left">
+        <div class="col-md-3 fixed padding-zero">
             <app-nav-page></app-nav-page>
+            <img src="../../assets/toggle-arrow.svg" alt="" class="custom-toggle">
         </div>
+        <div class="col-md-3"></div>
         <div class="col-md-9">
             <!-- ABOUT ME TEXT PIC -->
-            <div class="container">
+            <div class="container margin-60">
                 <div class="row">
                     <h1 class="mb-5">About Me</h1>
                 </div>
@@ -21,8 +23,8 @@
                         <div class="content">{{ aboutText }}</div>
                     </div>
                     <div class="col-md-6">
-                        <div class="headshot">
-                            <img [src]="headShot">
+                        <div class="headShot">
+                            <img class="img" [src]="headShot">
                         </div>
                     </div>
                 </div>

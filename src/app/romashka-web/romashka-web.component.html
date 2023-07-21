@@ -1,0 +1,69 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-3 fixed">
+            <app-nav-page></app-nav-page>
+        </div>
+
+        <!-- BEGINNING -->
+        <div class="col-md-3"></div>
+        <div class="col-md-9 py-5">
+            <h1>Romashka Charity & E-Commerce</h1>
+            <div class="container mt-4" >
+                <!-- Overview and Problem -->
+                <div class="row mt-5 pb-4 border-bottom">
+                    <div class="col-12 col-md-5">
+                        <h4 class="mb-3">Overview</h4>
+                        <!-- interpolate content text -->
+                        <p class="content">
+                            {{overviewText}}
+                        </p>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-12 col-md-5">
+                        <h4 class="mb-3">Challenges</h4>
+                         <!-- interpolate content text -->
+                        <p class="content">
+                            {{challengesText}}
+                        </p>
+                    </div>
+
+                    <div class="col-md-1"></div>
+                </div>
+
+                <!-- Key responsibilities & Timelines -->
+                <div class="row mt-4 pb-4 border-bottom">
+                    <div class="col-12 col-md-6">
+                        <h4 class="mb-3">Key Responsibilities</h4>
+                        <!-- interpolate content text -->
+                        <p class="content">
+                            {{keyResText}}
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h4 class="mb-3">Timelines</h4>
+                         <!-- interpolate content text -->
+                        <p class="content">
+                            {{timelinesText}}
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- EXAMPLE FOR SECTIONS WITH PICS -->
+                <div class="row mt-4 pb-4">
+                    <h4 class="mb-3">Sketches</h4>
+                    <div class="sketches">
+                        <div class="sketch" *ngFor="let sketch of sketches">
+                    <a
+                        data-fancybox="gallery"
+                        href="{{serverURL + sketch.attributes.formats.medium.url}}"
+                        >
+                        <img src="{{serverURL + sketch.attributes.formats.medium.url}}" height="400" alt="" />
+                        </a>
+                    </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </div>
+</div>

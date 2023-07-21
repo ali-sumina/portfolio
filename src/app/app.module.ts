@@ -11,6 +11,12 @@ import { CaseStudiesComponent } from './case-studies/case-studies.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { FormsModule } from '@angular/forms';
+import { CasestudyTemplateComponent } from './casestudy-template/casestudy-template.component';
+import { RomashkaWebComponent } from './romashka-web/romashka-web.component';
+// import { Fancybox } from "@fancyapps/ui";
+// import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
+
 
 @NgModule({
   declarations: [
@@ -21,7 +27,9 @@ import { FormsModule } from '@angular/forms';
     NavPageComponent,
     CaseStudiesComponent,
     ProjectsComponent,
-    ContactsComponent
+    ContactsComponent,
+    CasestudyTemplateComponent,
+    RomashkaWebComponent
   ],
   imports: [
     BrowserModule,

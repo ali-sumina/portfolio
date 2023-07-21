@@ -1,5 +1,13 @@
 @import '../../styles.scss';
 
+.custom-toggle {
+    position: absolute;
+    .custom-toggle-icon{
+        width: 47px;
+    }
+
+}
+
 .nav-list{
     display: flex;
     flex-direction: column;
@@ -16,18 +24,48 @@
 
 
 .pageNav{
-    position: fixed;
+    // position: fixed;
     height: 100vh;
     border-right: $border;
+    .logo-section{
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+
+    }
     .logo{
-        width: 248px;
-        height: 80px;
+        height: 70px;
     }
     .column-flex{
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+
+    .navbar-toggler{
+        display: block;
+        .navbar-toggler-icon{
+           color: $darkGrey;
+        }
+
+        .accordion-button::after{
+            width: 24px !important;
+            height: 24px !important;
+            color: $darkGrey !important;
+        }
+
+
+        .accordion-body{
+            padding-bottom: 24px;
+            ul{
+                padding-left: 0 !important;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+        
     }
     
 
@@ -55,5 +93,36 @@
 
 }
 
+@media  screen and (max-width: 562px) {
+    .show {
+        display: block;
+    }
+
+    .hide{
+        display: none;
+    }
+
+    .navbar {
+        background-color: $lightCream !important;
+        border-bottom: $border;
+        padding-bottom: 24px;
+        .logo{
+            height: 60px;
+        }
+
+        h4{
+            margin-top: 48px;
+        }
+        .social-icons{
+            margin-top: 32px;
+            display: flex;
+            gap: 24px;
+    
+            .soc-icon{
+                width: 42px;
+            }
+        }
+    }
+}
 
 

@@ -7,13 +7,13 @@
             <h3>{{ project.attributes.ProjectTitle }}</h3>
             <p class="content">{{ project.attributes.ProjectDescription }}</p>
             <a href="">
-               <button class="btn dark-btn py-3 px-5">See Project</button>
+               <a routerLink="/biogeek"><button class="btn dark-btn py-3 px-5">See Project</button></a>
             </a>
         </div>
 
         </div>
         <div class="col-12 col-md-6 img">
-            <img src="{{localHost + project.attributes.ProjectImage.data.attributes.formats.medium.url}}" alt="">
+            <img class="imgClass" src="{{localHost + project.attributes.ProjectImage.data.attributes.formats.medium.url}}" alt="">
             <!-- img -->
         </div>
     </div>

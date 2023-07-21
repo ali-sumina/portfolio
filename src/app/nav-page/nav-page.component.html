@@ -1,10 +1,24 @@
-<nav class="pageNav">
-    <div class="container-fluid column-flex py-5">
-        <div class="top-part">
+<!-- <a href="" class="custom-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="true" aria-controls="collapseWidthExample">
+<img src="../../assets/toggle-arrow.svg" alt="" class="custom-toggle-icon">
+</a> -->
+
+
+<nav class="pageNav navbar-expand-lg hide">
+  <!-- <div class="pageNav collapse collapse-horizontal" id="collapseWidthExample"> -->
+    <div class="container-fluid column-flex py-5 ">
+      <div class="top-part">
+          <div class="logo-section">
         <a routerLink="/" class="logo-home">
             <!-- Upload Logo to Strapi -->
             <img src="../../assets/logo.svg" alt="" class="logo">
         </a>
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="../../assets/menu-burger.svg" class="navbar-toggler-icon" alt="">
+        </button> -->
+      </div>
+        
+        <!-- <div class="collapse navbar-collapse" id="#navbarToggleExternalContent"> -->
+          
         <ul class="nav-list mt-5">
 
             <li class="nav-item">
@@ -19,28 +33,36 @@
                 </a>
             </li> -->
 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <h3>Projects</h3>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" routerLink="/case-studies" [routerLinkActive]="['active']">
-                        <h5>Case Studies</h5>
-                    </a>
-                </li>
-                    <li><a class="dropdown-item" routerLink="/case-studies">
-                        <h5>UI & Web Design</h5>
-                    </a>
-                </li>
-                    <li><a class="dropdown-item" routerLink="/case-studies">
-                        <h5>Graphic Design</h5>
-                    </a>
-                </li>
+            <li class="nav-item accordion-item">
 
-                  </ul>
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">                    
+                <h3>Projects</h3>
+                </button>
+
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordion" aria-labelledby="panelsStayOpen-headingOne">
+                  <div class="accordion-body border-bottom panel">
+                    <ul class="menu">
+                      <li><a class="nav-item" routerLink="/case-studies" [routerLinkActive]="['active']">
+                          <h5>Case Studies</h5>
+                      </a>
+                  </li>
+                      <li><a class="nav-item" routerLink="/case-studies">
+                          <h5>UI & Web Design</h5>
+                      </a>
+                  </li>
+                      <li><a class="nav-item" routerLink="/case-studies">
+                          <h5>Graphic Design</h5>
+                      </a>
+                  </li>
+  
+                    </ul>                  
+                  </div>
+                </div>
+
+                  
             </li>
         </ul>
-    </div>
+</div>
 
         <div class="bottom-part">
         <h4>Contact Me To Hire:</h4>
@@ -71,9 +93,96 @@
         <!-- Should be downloadable -->
         <button class="btn light-btn mt-5">Download Resume</button>
     </div>
-</div>
+  </div>
+  <!-- </div> -->
+<!-- </div> -->
 </nav>
 
+
+
+<!-- MOBILE -->
+
+<nav class="navbar navbar-expand-md bg-light">
+  <div class="container-fluid">
+    <a routerLink="/" class="logo-home">
+      <!-- Upload Logo to Strapi -->
+      <img src="../../assets/logo.svg" alt="" class="logo">
+  </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <img src="../../assets/menu-burger.svg" alt="">
+
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="nav-list mt-5">
+
+        <li class="nav-item">
+            <a routerLink="/about">
+                <h3>About</h3>
+            </a>
+        </li>
+<!-- 
+        <li class="nav-item">
+            <a routerLink="/contacts">
+                <h3>Contacts</h3>
+            </a>
+        </li> -->
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <h3>Projects</h3>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" routerLink="/case-studies" [routerLinkActive]="['active']">
+                    <h5>Case Studies</h5>
+                </a>
+            </li>
+                <li><a class="dropdown-item" routerLink="/case-studies">
+                    <h5>UI & Web Design</h5>
+                </a>
+            </li>
+                <li><a class="dropdown-item" routerLink="/case-studies">
+                    <h5>Graphic Design</h5>
+                </a>
+            </li>
+
+              </ul>
+        </li>
+    </ul>
+
+    <div class="bottom-part">
+      <h4>Contact Me To Hire:</h4>
+      <div class="icon-contact mt-3">
+          <!-- STRAPI! Loop this info -->
+          <img class="nav-icon" src="{{localHost + emailIcon}}" alt="">
+          <p class="content">{{email}}</p>
+      </div>
+      <div class="icon-contact mt-3">
+          <!-- STRAPI! Loop this info -->
+          <img class="nav-icon" src="{{localHost + phoneIcon}}" alt="">
+          <p class="content">{{phoneNum}}</p>
+      </div>
+
+      <div class="social-icons">
+          <a href="" class="soc-link">
+              <img src="../../assets/linkedin.svg" alt="" class="soc-icon">
+          </a>
+          <a href="" class="soc-link">
+              <img src="../../assets/behance.svg" alt="" class="soc-icon">
+          </a>
+          <a href="" class="soc-link">
+              <img src="../../assets/instagram.svg" alt="" class="soc-icon">
+          </a>
+
+      </div>
+
+      <!-- Should be downloadable -->
+      <button class="btn light-btn mt-5">Download Resume</button>
+  </div>
+
+
+    </div>
+  </div>
+</nav>
 
 
 

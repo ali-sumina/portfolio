@@ -6,6 +6,8 @@ import { CaseStudiesComponent } from './case-studies/case-studies.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ProjectComponent } from './project/project.component';
+import { CasestudyTemplateComponent } from './casestudy-template/casestudy-template.component';
+import { RomashkaWebComponent } from './romashka-web/romashka-web.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -13,7 +15,9 @@ const routes: Routes = [
   {path: 'case-studies', component: CaseStudiesComponent},
   {path: 'projects', component: ProjectsComponent},
   {path: 'contacts', component: ContactsComponent},
-  {path: 'project', component: ProjectComponent}
+  {path: 'project', component: ProjectComponent},
+  {path: 'biogeek', component: CasestudyTemplateComponent},
+  {path: 'romashka', component: RomashkaWebComponent}
 ];
 
 @NgModule({

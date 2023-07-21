@@ -1,0 +1,231 @@
+<div class="container-flud">
+    <div class="row">
+        <div class="col-md-3 fixed">
+            <app-nav-page></app-nav-page>
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-9 py-5">
+            <h1>{{caseStudy.listTitle}}</h1>
+            <div class="container mt-2" >
+                <!-- Overview and Problem -->
+                <div class="row mt-4 pb-4 border-bottom">
+                    <div class="col-12 col-md-5">
+                        <h4 class="mb-3">Overview</h4>
+                        <!-- interpolate content text -->
+                        <p class="content">
+                            {{caseStudy.overviewText}}
+                        </p>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-12 col-md-5">
+                        <h4 class="mb-3">Problem Statement</h4>
+                         <!-- interpolate content text -->
+                        <p class="content">
+                            {{caseStudy.problemText}}
+                        </p>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+
+                <!-- Key responsibilities & Timelines -->
+                <div class="row mt-4 pb-4 border-bottom">
+                    <div class="col-12 col-md-6">
+                        <h4 class="mb-3">Key Responsibilities</h4>
+                        <!-- interpolate content text -->
+                        <p class="content">
+                            {{caseStudy.keyResText}}
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h4 class="mb-3">Timelines</h4>
+                         <!-- interpolate content text -->
+                        <p class="content">
+                            {{caseStudy.timelineText}}
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="mt-5">Memory Problem</h2>
+
+                <div class="row mt-4 pb-4">
+                    <div class="col-12 col-md-6">
+                        <h4 class="mb-3">Stereotypes</h4>
+                        <!-- interpolate content text -->
+                        <p class="content">
+                            It is essential to address a prevalent notion often expressed by some mature individuals: the belief that they are not wired for learning.
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h4 class="mb-3">Science</h4>
+                         <!-- interpolate content text -->
+                        <p class="content">
+                            Memory processes in mature individuals can show declines in certain abilities, such as episodic memory, working memory challenges, slower information processing, and increased susceptibility to interference. 
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- What If with Col-7 -->
+                <div class="row border-bottom">
+                    <div class="col-12 col-md-7">
+                        <h4 class="mb-3">But what if...</h4>
+                         <!-- interpolate content text -->
+                            <ul class="bullet">
+                                <li><p class="content">
+                                    ...mature individuals have the potential to excel in learning new information?
+                                </p></li>
+                                <li><p class="content">
+                                    ...I challenge stereotypes by understanding how memory functions in mature individuals?
+                                </p></li>
+                                <li><p class="content">
+                                    ...the perceived problem stems from subjective experiences rather than factual evidence?
+                                </p></li>
+                            </ul>
+                    </div>
+                </div>
+
+                <h2 class="mt-5">Breaking Stereotypes</h2>
+                <p class="content">
+                    I decided to investigate how adults' memory functions by referencing lectures and scientific videos on this topic.
+                </p>
+
+                <!-- Video 1 -->
+                <div class="row mt-5">
+                    <div class="col-12 col-md-5">
+                        <h4 class="mb-3">Alan Castel – How we learn as we age</h4>
+                        <a href="https://youtu.be/g5jUjOr7G8M">https://youtu.be/g5jUjOr7G8M</a>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-12 col-md-5">
+                        <h5>Conclusion</h5>
+                        <p class="content">
+                            Mature people tend to have more selective memory, and if they learn something, they are aware of their goals much better. 
+                        </p>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+
+                 <!-- Video 2 -->
+                 <div class="row mt-5">
+                    <div class="col-12 col-md-5">
+                        <h4 class="mb-3">Justin Sung – Stop studying. Start learning</h4>
+                        <a href="https://youtu.be/TQXMl4GycD0">https://youtu.be/TQXMl4GycD0</a>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-12 col-md-5">
+                        <h5>Conclusion</h5>
+                        <p class="content">
+                            Frustration occurs when we randomly absorb information that has no bonds. Learning works when we create or look for relationships between the information we are trying to chunk. By noticing these bonds, we can strengthen them through thoughtful note-taking.                        </p>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="row mt-5">
+                    <div class="col-12 col-md-5">
+                        <h4 class="mb-3">Anastacia Key – NO! You don’t have a bad memory!</h4>
+                        <a href="https://youtu.be/g5jUjOr7G8M">https://youtu.be/g5jUjOr7G8M</a>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-12 col-md-5">
+                        <h5>Conclusion</h5>
+                        <p class="content">
+                            <!-- Still have to write -->
+                        </p>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+
+                <!-- Hypothesises -->
+                <div class="row border-bottom">
+                    <div class="col-12 col-md-7">
+                        <h2 class="mb-3">Hypothesises</h2>
+                         <!-- interpolate content text -->
+                            <ul class="bullet">
+                                <li><p class="content" *ngFor="let hypothesis of hypothesises">
+                                    {{hypothesis.bulletPoint}}
+                                </p></li>
+                            </ul>
+                    </div>
+                </div>
+
+                <!-- User Flow -->
+
+                <!-- User Research -->
+
+                <h2 class="mt-5">User Research</h2>
+                <p class="content">
+                    {{caseStudy.userresearchText}}
+                </p>
+
+                <div class="row mt-5">
+                    <div class="col-12 col-md-10">
+                        <img class="embedImg" src="{{persona}}" alt="">
+                    </div> 
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-12">
+                    <h4 class="mb-3">Customer Journey Map</h4>
+                    <img src="{{cjm}}" class="embedImg" alt="">
+                </div>
+                </div>
+
+                <div class="border-bottom mt-5"></div>
+
+                <h2 class="mt-5 mb-3">Design</h2>
+
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <h4 class="mb-3">Sketches</h4>
+                        <img src="{{sketches}}" class="embedImg" alt="">
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <h4 class="mb-3">Wireframes</h4>
+                        <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="true">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active" *ngFor="let wireframe of wireframes">
+                                <img src="{{serverURL + wireframe.attributes.url}}" class="d-block w-100" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <h4 class="mb-3">Home & Catalog Pages</h4>
+                        <a
+                            data-fancybox
+                            href="{{homeCatalog}}"
+                            data-src=""
+                            data-caption="Hello world"
+                            >
+                            <img src="{{homeCatalog}}" alt="" />
+                            </a>
+                        <img src="" class="embedImg" alt="">
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -6,7 +6,9 @@
 
 .projContainer{
     height: 375px;
-    border: 4px solid $darkGrey;
+    background-color: $lightCream;
+    border: 0.5px solid gray;
+    // border-radius: 20px;
     .row{
         height: 100%;
     }
@@ -23,7 +25,12 @@
         // background-image: url({{projectImg}});
         // // background-color: grey;
         height: 100%;
-        border-left: $border;
+        border-left: 0.5px solid gray ;
+        .imgClass{
+            max-height: 100%;
+            max-width: 100%;
+        }
+
     }
     
 }
