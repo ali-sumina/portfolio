@@ -26,12 +26,6 @@
                     <h3>About</h3>
                 </a>
             </li>
-<!-- 
-            <li class="nav-item">
-                <a routerLink="/contacts">
-                    <h3>Contacts</h3>
-                </a>
-            </li> -->
 
             <li class="nav-item accordion-item">
 
@@ -120,32 +114,34 @@
                 <h3>About</h3>
             </a>
         </li>
-<!-- 
-        <li class="nav-item">
-            <a routerLink="/contacts">
-                <h3>Contacts</h3>
-            </a>
-        </li> -->
 
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <h3>Projects</h3>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" routerLink="/case-studies" [routerLinkActive]="['active']">
-                    <h5>Case Studies</h5>
-                </a>
-            </li>
-                <li><a class="dropdown-item" routerLink="/case-studies">
-                    <h5>UI & Web Design</h5>
-                </a>
-            </li>
-                <li><a class="dropdown-item" routerLink="/case-studies">
-                    <h5>Graphic Design</h5>
-                </a>
-            </li>
+        <li class="nav-item accordion-item">
 
-              </ul>
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">                    
+            <h3>Projects</h3>
+            </button>
+
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordion" aria-labelledby="panelsStayOpen-headingOne">
+              <div class="accordion-body border-bottom panel">
+                <ul class="menu">
+                  <li><a class="nav-item" routerLink="/case-studies" [routerLinkActive]="['active']">
+                      <h5>Case Studies</h5>
+                  </a>
+              </li>
+                  <li><a class="nav-item" routerLink="/case-studies">
+                      <h5>UI & Web Design</h5>
+                  </a>
+              </li>
+                  <li><a class="nav-item" routerLink="/case-studies">
+                      <h5>Graphic Design</h5>
+                  </a>
+              </li>
+
+                </ul>                  
+              </div>
+            </div>
+
+              
         </li>
     </ul>
 

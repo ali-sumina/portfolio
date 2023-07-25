@@ -1,8 +1,10 @@
 <!-- NAV -->
 <!-- Write a condition to hide page nav -->
 
-<div class="container-fluid screen" [class]="homeNav" >
-    <div class="row">
+<app-nav-page class="hide-desk show"></app-nav-page>
+
+<div class="container-fluid screen padding-zero" [class]="homeNav" >
+    <div class="row hide">
       <div class="space-between">
       <div class="img-container">
         <!-- put this logo into assets -->
@@ -22,12 +24,29 @@
       </div>
   
     </div>
+
+    <div class="mob-text hide-desk show border-bottom pt-3">
+      <p class="content">
+        *Nothing complicated for mobile. Switch to desktop if you expected something cool*
+      </p>
+    </div>
   
     <div class="row">
       <div class="space">
         <div class="welcome-message">
           <h2 class="border-bottom"><span class="regularh2">My name is</span> Alexandra Sumina, <span class="italich2">and I’m a</span> UI/UX Designer.</h2>
   
+
+          <!-- MOB BUTTONS -->
+          <div class="buttons-mob hide-desk show border-bottom-mob">
+            <a href="" class="btn-mob">
+              <button class="btn dark-btn mb-3">See Projects</button>
+            </a>
+            <a href="" class="btn-mob">
+              <button class="btn light-btn">About Me</button>
+            </a>
+          </div>
+
           <div class="bottom-part">
             <h4 class="pb-2">Contact Me To Hire:</h4>
             <div class="icon-contact">
@@ -46,12 +65,14 @@
           <img src="../../assets/menu-point.svg" alt="" class="point">
           <p class="content">– hover to explore my website world</p>
         </div>
+
+        
       
     </div>
   
   </div>
   
-  <div class="map">
+  <div class="map hide">
     <div class="point-nav">
 
       <h3 class="projects">Projects</h3>

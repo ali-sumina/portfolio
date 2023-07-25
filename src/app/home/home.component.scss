@@ -2,11 +2,11 @@
 
 // DESKTOP
 
-.hide{
+.hide-desk{
     display: none;
 }
 
-.show{
+.show-desk{
     display: block;
 }
 
@@ -34,7 +34,7 @@
         background-color: $lightCream;
         padding: 36px 24px;
         height: 435px;
-        width: 443px;
+        max-width: 443px;
         .regularh2 {
             font-family: $florenceSans;
             text-transform: none;
@@ -47,7 +47,7 @@
         }
         .border-bottom{
             padding-bottom: 24px;
-            border-bottom: 1px solid;
+            border-bottom: 0.5px grey solid;
         }
 
         .bottom-part {
@@ -61,7 +61,7 @@
     }
 
     .signage{
-        display: flex !important;
+        display: flex;
         align-items: center;
         gap: 8px;
         .content{
@@ -166,10 +166,42 @@
 // MOBILE
 @media screen and (max-width: 562px)  {
     .hide{
-        display: none;
+        display: none !important;
     }
     
     .show {
         display: block;
     }
+
+    .space{
+        display: block !important;
+    }
+
+    .screen{
+        height: auto;
+        background-image: none;
+    }
+
+    .mob-text{
+        padding: 12px 12px !important;
+        .content{
+            margin-bottom: 0;
+        }
+    }
+
+    .welcome-message{
+        border: 0px solid grey !important;
+        background-color: #ffffff00 !important;
+        padding: 0 12px !important;
+    }
+
+    .border-bottom{
+        border: 0px;
+    }
+
+    .border-bottom-mob{
+        padding-bottom: 24px;
+         border-bottom: 0.5px grey solid;
+    }
+
     }

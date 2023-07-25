@@ -31,6 +31,22 @@
     }
 }
 
+.nav{
+    gap: 32px;
+}
+
+.nav-tabs{
+    --bs-nav-tabs-border-width: 0px;
+    border-bottom: $border;
+    --bs-nav-tabs-link-active-border-color: #ffffff00;
+    background-color: #ffffff00 !important;
+    .nav-link:active, .nav-link:focus, .active{
+        border-bottom: $border;
+        background-color: #ffffff00 !important;
+    }
+}
+
+
 @media screen and (max-width: 562px) {
     .padding-zero {
         padding: 0px !important;

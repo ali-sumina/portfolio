@@ -206,4 +206,12 @@ body{
     h2{
         @include h1();
     }
+
+    .light-btn, .dark-btn{
+        width: 100%;
+    }
+
+    .padding-zero{
+        padding: 0 !important;
+    }
 }

@@ -22,6 +22,10 @@
     }
 }
 
+.navbar{
+--bs-navbar-toggler-border-color: 0px solid grey !important;
+}
+
 
 .pageNav{
     // position: fixed;
@@ -59,6 +63,7 @@
         .accordion-body{
             padding-bottom: 24px;
             ul{
+                padding-inline-start: 0px !important;
                 padding-left: 0 !important;
                 display: flex;
                 flex-direction: column;
@@ -102,8 +107,13 @@
         display: none;
     }
 
+    // .pageNav{
+       
+    // }
+
     .navbar {
         background-color: $lightCream !important;
+        padding-top: 42px;
         border-bottom: $border;
         padding-bottom: 24px;
         .logo{
