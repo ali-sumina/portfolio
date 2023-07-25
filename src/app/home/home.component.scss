@@ -189,6 +189,10 @@
         }
     }
 
+    .margin-top-24{
+        margin-top: 24px;
+    }
+
     .welcome-message{
         border: 0px solid grey !important;
         background-color: #ffffff00 !important;
@@ -197,11 +201,13 @@
 
     .border-bottom{
         border: 0px;
+        margin-bottom: 0;
     }
 
     .border-bottom-mob{
         padding-bottom: 24px;
          border-bottom: 0.5px grey solid;
+         
     }
 
     }
