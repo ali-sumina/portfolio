@@ -34,7 +34,39 @@ export interface About {
                 }]
             }
 
-            // Add Skills Here
+            skill_set: {
+                data: {
+                    attributes: {
+                        ui_skill: {
+                            data: {
+                                attributes: {
+                                    Skill: [{
+                                        SkillText:string
+                                    }],
+
+                                    Tool: [{
+                                        SkillText: string
+                                    }]
+                                }
+                            }
+                        },
+
+                        ux_skill: {
+                            data: {
+                                attributes: {
+                                    Skill: [{
+                                        SkillText:string
+                                    }],
+
+                                    Tool: [{
+                                        SkillText: string
+                                    }]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

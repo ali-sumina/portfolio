@@ -8,16 +8,18 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { ProjectComponent } from './project/project.component';
 import { CasestudyTemplateComponent } from './casestudy-template/casestudy-template.component';
 import { RomashkaWebComponent } from './romashka-web/romashka-web.component';
+import { InProgressComponent } from './in-progress/in-progress.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
+  {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},
   {path: 'case-studies', component: CaseStudiesComponent},
   {path: 'projects', component: ProjectsComponent},
   {path: 'contacts', component: ContactsComponent},
   {path: 'project', component: ProjectComponent},
   {path: 'biogeek', component: CasestudyTemplateComponent},
-  {path: 'romashka', component: RomashkaWebComponent}
+  {path: 'romashka', component: RomashkaWebComponent},
+  {path: '', component: InProgressComponent}
 ];
 
 @NgModule({

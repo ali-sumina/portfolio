@@ -13,6 +13,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { FormsModule } from '@angular/forms';
 import { CasestudyTemplateComponent } from './casestudy-template/casestudy-template.component';
 import { RomashkaWebComponent } from './romashka-web/romashka-web.component';
+import { InProgressComponent } from './in-progress/in-progress.component';
 // import { Fancybox } from "@fancyapps/ui";
 // import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
@@ -29,7 +30,8 @@ import { RomashkaWebComponent } from './romashka-web/romashka-web.component';
     ProjectsComponent,
     ContactsComponent,
     CasestudyTemplateComponent,
-    RomashkaWebComponent
+    RomashkaWebComponent,
+    InProgressComponent
   ],
   imports: [
     BrowserModule,

@@ -33,6 +33,14 @@
 
 @media screen and (max-width: 562px) {
     .padding-zero {
-        padding: 0;
+        padding: 0px !important;
+    }
+
+    .margin-from-nav {
+        margin-top: 130px;
+    }
+
+    .margin-pic{
+        margin-top: 48px;
     }
 }

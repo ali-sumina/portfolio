@@ -8,22 +8,22 @@
     <div class="row">
         <div class="col-md-3 fixed padding-zero">
             <app-nav-page></app-nav-page>
-            <img src="../../assets/toggle-arrow.svg" alt="" class="custom-toggle">
+            <img src="../../assets/toggle-arrow.svg" alt="" class="custom-toggle visually-hidden">
         </div>
         <div class="col-md-3"></div>
         <div class="col-md-9">
             <!-- ABOUT ME TEXT PIC -->
             <div class="container margin-60">
-                <div class="row">
+                <div class="row margin-from-nav">
                     <h1 class="mb-5">About Me</h1>
                 </div>
                 <div class="row mb-5">
-                    <div class="col-md-6" >
+                    <div class="col-12 col-md-6" >
                         <h3 class="mb-4">Passionate to explore</h3>
                         <div class="content">{{ aboutText }}</div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="headShot">
+                    <div class="col-12 col-md-6 padding-zero">
+                        <div class="headShot margin-pic">
                             <img class="img" [src]="headShot">
                         </div>
                     </div>
@@ -31,7 +31,7 @@
 
             <!-- WORK EXPERIENCE / EDUCATION -->
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-12 col-md-6">
                     <!-- Work EXPERIENCE -->
                     <h3 class="mb-5">Work Experience</h3>
                     <!-- ngFor -->
@@ -50,7 +50,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-12 col-md-6">
                     <!-- Education -->
                     <h3 class="mb-5">Education</h3>
                     <!-- ngFor -->
@@ -71,6 +71,111 @@
 
                 </div>
             </div>
+
+
+            <!-- SKILLS -->
+
+            <div class="row margin-60">
+                <h1 class="mb-5">Skills</h1>
+            </div>
+            <!-- put tabs here -->
+
+
+
+            <!-- Tabs  -->
+
+            <ul class="nav nav-tabs " id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">UX Design</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">UI & Web Design</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Web Development</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+
+                <!-- UX Design -->
+                <div class="tab-pane fade show active mb-5" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                    <div class="row mt-5">
+                        <div class="col-12 col-md-6">
+                            <!-- Skills -->
+                            <h3 class="mb-5">Skills</h3>
+                            <!-- ngFor -->
+                            <div class="work-exp" *ngFor="let UXskill of UXskills">
+                                <div class="position-year">
+                                    <div class="position">
+                                        <img src="../../assets/work.svg" alt="" class="work-icon">
+                                        <div class="position-company">
+                                        <h5 class="mb-2">{{UXskill.SkillText}}</h5>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <!-- Tools -->
+                            <h3 class="mb-5">Tools</h3>
+                            <!-- ngFor -->
+                            <div class="work-exp" *ngFor="let UXtool of UXtools">
+                                <div class="position-year">
+                                    <div class="position">
+                                        <img src="../../assets/edu.svg" alt="" class="work-icon">
+                                        <div class="position-company">
+                                        <h5 class="mb-2">{{UXtool.SkillText}}</h5>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Design -->
+                <div class="tab-pane fade mb-5" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <!-- Skills -->
+                            <h3 class="mb-5">Skills</h3>
+                            <!-- ngFor -->
+                            <div class="work-exp" *ngFor="let UIskill of UIskills">
+                                <div class="position-year">
+                                    <div class="position">
+                                        <img src="../../assets/work.svg" alt="" class="work-icon">
+                                        <div class="position-company">
+                                        <h5 class="mb-2">{{UIskill.SkillText}}</h5>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Tools -->
+                            <h3 class="mb-5">Tools</h3>
+                            <!-- ngFor -->
+                            <div class="work-exp" *ngFor="let UItool of UItools">
+                                <div class="position-year">
+                                    <div class="position">
+                                        <img src="../../assets/edu.svg" alt="" class="work-icon">
+                                        <div class="position-company">
+                                        <h5 class="mb-2">{{UItool.SkillText}}</h5>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Dev -->
+                <div class="tab-pane fade mb-5" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                    ...
+                </div>
+              </div>
 
             </div>
 
