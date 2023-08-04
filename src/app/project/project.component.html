@@ -1,20 +1,23 @@
 
 <div class="container-fluid projContainer mt-5" *ngFor="let project of projects">
-    <div class="row" >
+    <div class="row border-under-proj" >
         <div class="col-12 col-md-6 text">
             <div class="text-container">
             <!-- text -->
             <h3>{{ project.attributes.ProjectTitle }}</h3>
             <p class="content">{{ project.attributes.ProjectDescription }}</p>
-            <a href="">
-               <a routerLink="/biogeek"><button class="btn dark-btn py-3 px-5">See Project</button></a>
-            </a>
-        </div>
+
+               <a href="{{project.attributes.ProjectLink}}"><button class="btn dark-btn mt-3 py-3 px-5 hide-mob">See Project</button></a>
+            </div>
 
         </div>
         <div class="col-12 col-md-6 img">
             <img class="imgClass" src="{{localHost + project.attributes.ProjectImage.data.attributes.formats.medium.url}}" alt="">
             <!-- img -->
         </div>
+        <div class="row hide show-mob padding-zero">
+            <a href="{{project.attributes.ProjectLink}}"><button class="btn dark-btn mt-3 py-3 px-5">See Project</button></a>
+        </div>
     </div>
 </div>
+

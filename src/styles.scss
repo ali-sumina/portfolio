@@ -158,10 +158,22 @@ h5{
 
 .dark-btn{
     @include darkButton();
+    .hover{
+        background-color: #4F4F4F;
+    }
+}
+
+.dark-btn:hover{
+    @include darkButton();
+    background-color: #363636;
 }
 
 .light-btn {
     @include lightButton()
+}
+
+.light-btn:hover {
+    @include darkButton()
 }
 
 // DESKTOP
@@ -205,6 +217,14 @@ body{
 
     h2{
         @include h1();
+    }
+
+    h3{
+        font-size: 24px;
+    }
+
+    .content{
+        font-size: 16px;
     }
 
     .light-btn, .dark-btn{

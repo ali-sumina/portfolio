@@ -55,7 +55,8 @@
                     <div class="sketches">
                         <div class="sketch" *ngFor="let sketch of sketches">
                     <a
-                        data-fancybox="gallery"
+                        data-toogle="lightbox"
+                        data-gallery="romashka"
                         href="{{serverURL + sketch.attributes.formats.medium.url}}"
                         >
                         <img src="{{serverURL + sketch.attributes.formats.medium.url}}" height="400" alt="" />

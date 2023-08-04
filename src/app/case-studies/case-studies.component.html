@@ -1,15 +1,15 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 col-md-3 fixed">
+        <div class="col-12 col-md-3 fixed padding-zero">
             <app-nav-page></app-nav-page>
         </div>
         <div class="col-md-3"></div>
         <div class="col-12 col-md-9">
-            <h1>{{projectsList.data.attributes.Title}}</h1>
-            <div class="container mt-3" >
+            <div class="container margin-60" >
                 <!-- LOOP THIS ROW -->
-                <div class="row">
-                    <app-project></app-project>
+                <div class="row margin-from-nav">
+                    <h1>{{projectsList.data.attributes.Title}}</h1>
+                    <app-project class="mt-md-3"></app-project>
                 </div>
             </div>
         </div>

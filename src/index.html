@@ -15,16 +15,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
 
-    <!-- FANCYBOX -->
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
-    />
+    <!-- LIGHTBOX -->
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+
     
     
 </head>
 <body>
   <app-root></app-root>
 </body>
+<script>
+  import Lightbox from 'bs5-lightbox';
+
+const options = {
+	keyboard: true,
+	size: 'fullscreen'
+};
+
+document.querySelectorAll('.my-lightbox-toggle').forEach((el) => el.addEventListener('click', (e) => {
+	e.preventDefault();
+	const lightbox = new Lightbox(el, options);
+	lightbox.show();
+}));
+</script>
 </html>

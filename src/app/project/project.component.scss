@@ -5,27 +5,37 @@
 }
 
 .projContainer{
-    height: 375px;
+    max-height: 410px;
     background-color: $lightCream;
-    border: 0.5px solid gray;
+    
+    // border: 0.5px solid gray;
     // border-radius: 20px;
     .row{
         height: 100%;
+
     }
     .text{
         padding-left: 30px;
         display: flex;
         align-items: center;
+
         .content{
             @include content-text();
+            max-width: 470px;
         }
+    }
+
+    .border-under-proj{
+        padding-bottom: 32px;
+        border-bottom: 0.5px solid grey;
     }
 
     .img{
         // background-image: url({{projectImg}});
         // // background-color: grey;
-        height: 100%;
-        border-left: 0.5px solid gray ;
+        height: 80%;
+        border: $border;
+
         .imgClass{
             max-height: 100%;
             max-width: 100%;
@@ -39,11 +49,26 @@
 
     // HIDE / SHOW
 
+    .show-mob{
+        display: block;
+    }
+
+    .hide-mob{
+        display: none;
+    }
 
 
     .projContainer{
-        .img{
-            border-left: 0px;
+        max-height: 656px;
+        .text{
+            padding-left: 0;
         }
+
+        // .img{
+        //     border-left: 0px;
+        // }
+            .btn {
+                width: 100%;
+            }
     }
 }

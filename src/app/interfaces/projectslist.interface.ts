@@ -3,6 +3,7 @@ export interface Projects {
         attributes: {
             ProjectTitle: string;
             ProjectDescription: string;
+            ProjectLink: string;
             ProjectImage: {
                 data: {
                     attributes: {
