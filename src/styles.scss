@@ -10,6 +10,25 @@ $florenceBlack: Florencesans Black;
 $florenceSans: Florencesans;
 $contentFont: Avenir Next;
 
+@font-face {
+    src: url('assets/florencesans/Florsn01.ttf');
+    font-family: $florenceSans;
+}
+
+@font-face {
+    src: url('assets/florencesans/Florsn02.ttf');
+    font-family: $florenceSans;
+    font-weight: bold;
+}
+
+@font-face {
+    src: url('assets/florencesans/Florsn33.ttf');
+    font-family: $florenceBlack;
+}
+
+
+
+
 // FLEX
 @mixin fullCenter () {
     display: flex;

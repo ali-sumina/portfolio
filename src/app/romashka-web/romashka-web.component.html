@@ -50,21 +50,33 @@
 
 
                 <!-- EXAMPLE FOR SECTIONS WITH PICS -->
+
+
+                <!-- Button trigger modal -->
                 <div class="row mt-4 pb-4">
                     <h4 class="mb-3">Sketches</h4>
-                    <div class="sketches">
-                        <div class="sketch" *ngFor="let sketch of sketches">
-                    <a
-                        data-toogle="lightbox"
-                        data-gallery="romashka"
-                        href="{{serverURL + sketch.attributes.formats.medium.url}}"
-                        >
-                        <img src="{{serverURL + sketch.attributes.formats.medium.url}}" height="400" alt="" />
-                        </a>
+                        <div id="gallery-lightbox" class="sketch col-12 col-md-3 mb-3 mb-md-0" data-bs-toggle="modal"  *ngFor="let sketch of sketches; let i = index" [attr.data-bs-target]="'#staticBackdrop'+i">
+                        <img src="{{serverURL + sketch.attributes.formats.medium.url}}" height="400" alt="" class="modal-img"/>
+                <!-- <button type="button" class="btn btn-primary" >
+                    Launch static backdrop modal
+                </button> -->
+                
+                <!-- Modal -->
+                <div class="modal fade sketch-modal" [id]="'staticBackdrop'+i" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="{{serverURL + sketch.attributes.formats.large.url}}" alt=""/>
+                        </div>
                     </div>
                     </div>
-                </div>
+                    </div>
+
+                  </div>
         </div>
     </div>
     </div>
-</div>
+<!-- </div> -->

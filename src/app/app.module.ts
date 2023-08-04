@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { CasestudyTemplateComponent } from './casestudy-template/casestudy-template.component';
 import { RomashkaWebComponent } from './romashka-web/romashka-web.component';
 import { InProgressComponent } from './in-progress/in-progress.component';
+import { DesignProjsComponent } from './design-projs/design-projs.component';
 // import { Fancybox } from "@fancyapps/ui";
 // import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
@@ -31,7 +32,8 @@ import { InProgressComponent } from './in-progress/in-progress.component';
     ContactsComponent,
     CasestudyTemplateComponent,
     RomashkaWebComponent,
-    InProgressComponent
+    InProgressComponent,
+    DesignProjsComponent
   ],
   imports: [
     BrowserModule,
