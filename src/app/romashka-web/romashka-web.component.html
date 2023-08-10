@@ -77,6 +77,33 @@
 
                   </div>
         </div>
+
+            <!-- DESIGNS -->
+            <div class="row mt-4 pb-4">
+                <h4 class="mb-3">Designs</h4>
+                    <div id="gallery-lightbox" class="sketch col-12 col-md-3 mb-3 mb-md-0" data-bs-toggle="modal"  *ngFor="let design of designs; let i = index" [attr.data-bs-target]="'#staticBackdrop1'+i">
+                    <img src="{{serverURL + design.attributes.url}}" width="250" alt="" class="modal-img"/>
+            <!-- <button type="button" class="btn btn-primary" >
+                Launch static backdrop modal
+            </button> -->
+            
+            <!-- Modal -->
+            <div class="modal fade sketch-modal" [id]="'staticBackdrop1'+i" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="{{serverURL + design.attributes.url}}" alt="" class="modal-img"/>
+                    </div>
+                </div>
+                </div>
+                </div>
+
+              </div>
+    </div>
+
     </div>
     </div>
 <!-- </div> -->

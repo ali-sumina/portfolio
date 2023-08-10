@@ -161,6 +161,23 @@
     }
 }
 
+.point-link:hover{
+    .point-text{
+        font-family: $florenceBlack;
+        font-size: 24px;
+    }
+    .point-icon{
+        background-image: url(../../assets/point-hover.svg);
+        background-size: cover;
+        .point{
+            visibility: hidden;
+        }
+    }
+    
+}
+
+
+
 
 
 // MOBILE

@@ -9,7 +9,13 @@ export interface WebCase {
                 Heading: string
             }
             Wireframes: null,
-            Designs: null,
+            Designs: {
+                data: [{
+                attributes: {
+                            url: string
+                }
+            }]
+        },
             VisualSystem: null,
             Sketches: { 
                 data: [{

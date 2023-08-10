@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Projects } from '../interfaces/projectslist.interface';
+import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { Projects } from '../interfaces/projectslist.interface';
 
 @Component({
-  selector: 'app-project',
-  templateUrl: './project.component.html',
-  styleUrls: ['./project.component.scss']
+  selector: 'app-graph-project',
+  templateUrl: './graph-project.component.html',
+  styleUrls: ['./graph-project.component.scss']
 })
-export class ProjectComponent implements OnInit {
+export class GraphProjectComponent implements OnInit {
 
   projects:any = [];
   projectTitle: string = "attributes.ProjectTitle";
@@ -22,7 +22,7 @@ export class ProjectComponent implements OnInit {
 
   ngOnInit(): void {
     // throw new Error('Method not implemented.');
-    this.http.get<Projects>(this.serverURL + '/api/projects-lists/1?populate=deep').subscribe (res => {
+    this.http.get<Projects>(this.serverURL + '/api/projects-lists/3?populate=deep').subscribe (res => {
       console.log (res)
       this.projects = res.data.attributes.projects.data;
       // this.projectTitle = ;
@@ -31,6 +31,5 @@ export class ProjectComponent implements OnInit {
     }
     )
   }
-  
 
 }

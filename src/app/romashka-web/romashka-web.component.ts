@@ -15,6 +15,7 @@ export class RomashkaWebComponent implements OnInit {
 
   constructor (private http:HttpClient){}
   sketches:any[] = []
+  designs:any[] = []
   overviewText = ''
   challengesText = ''
   keyResText = ''
@@ -27,6 +28,7 @@ export class RomashkaWebComponent implements OnInit {
     this.http.get<WebCase>(this.serverURL + '/api/web-cases/1?populate=*').subscribe(res => {
       console.log(res)
       this.sketches = res.data.attributes.Sketches.data
+      this.designs = res.data.attributes.Designs.data
 
       this.overviewText = res.data.attributes.overviewText
       this.challengesText = res.data.attributes.challengesText

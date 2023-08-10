@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Projects } from '../interfaces/projectslist.interface';
 import { environment } from 'src/environments/environment';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-project',
-  templateUrl: './project.component.html',
-  styleUrls: ['./project.component.scss']
+  selector: 'app-web-projects',
+  templateUrl: './web-projects.component.html',
+  styleUrls: ['./web-projects.component.scss']
 })
-export class ProjectComponent implements OnInit {
+export class WebProjectsComponent implements OnInit{
 
   projects:any = [];
   projectTitle: string = "attributes.ProjectTitle";
@@ -22,7 +22,7 @@ export class ProjectComponent implements OnInit {
 
   ngOnInit(): void {
     // throw new Error('Method not implemented.');
-    this.http.get<Projects>(this.serverURL + '/api/projects-lists/1?populate=deep').subscribe (res => {
+    this.http.get<Projects>(this.serverURL + '/api/projects-lists/2?populate=deep').subscribe (res => {
       console.log (res)
       this.projects = res.data.attributes.projects.data;
       // this.projectTitle = ;
@@ -31,6 +31,5 @@ export class ProjectComponent implements OnInit {
     }
     )
   }
-  
 
 }

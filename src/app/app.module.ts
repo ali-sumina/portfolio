@@ -15,6 +15,9 @@ import { CasestudyTemplateComponent } from './casestudy-template/casestudy-templ
 import { RomashkaWebComponent } from './romashka-web/romashka-web.component';
 import { InProgressComponent } from './in-progress/in-progress.component';
 import { DesignProjsComponent } from './design-projs/design-projs.component';
+import { WebProjectsComponent } from './web-projects/web-projects.component';
+import { GraphicProjsComponent } from './graphic-projs/graphic-projs.component';
+import { GraphProjectComponent } from './graph-project/graph-project.component';
 // import { Fancybox } from "@fancyapps/ui";
 // import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
@@ -33,7 +36,10 @@ import { DesignProjsComponent } from './design-projs/design-projs.component';
     CasestudyTemplateComponent,
     RomashkaWebComponent,
     InProgressComponent,
-    DesignProjsComponent
+    DesignProjsComponent,
+    WebProjectsComponent,
+    GraphicProjsComponent,
+    GraphProjectComponent
   ],
   imports: [
     BrowserModule,

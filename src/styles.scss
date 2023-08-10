@@ -231,19 +231,27 @@ body{
 
 @media screen and (max-width: 562px) {
     h1{
-        @include h2();
+       font-size: 36px;
     }
 
     h2{
-        @include h1();
+        font-size: 44px;
     }
 
     h3{
         font-size: 24px;
     }
 
+    h5{
+        font-size: 18px;
+    }
+
     .content{
         font-size: 16px;
+    }
+
+    .small-text{
+        font-size: 13px;
     }
 
     .light-btn, .dark-btn{

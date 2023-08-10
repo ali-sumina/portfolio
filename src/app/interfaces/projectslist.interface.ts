@@ -1,21 +1,29 @@
 export interface Projects {
-    data: [{
+    data: {
         attributes: {
-            ProjectTitle: string;
-            ProjectDescription: string;
-            ProjectLink: string;
-            ProjectImage: {
-                data: {
+            projects: {
+                data: [{
                     attributes: {
-                        formats:{
-                            medium: {
-                                url: string;
+                        ProjectTitle: string;
+                        ProjectDescription: string;
+                        ProjectLink: string;
+                        ProjectImage: {
+                            data: {
+                                attributes: {
+                                    formats:{
+                                        medium: {
+                                            url: string;
+                                        }
+                                    }
+            
+                                }
                             }
                         }
-
                     }
-                }
+                }]
             }
+            
         }
-    }]
+    }
+    
 }
