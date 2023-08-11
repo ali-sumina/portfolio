@@ -82,17 +82,17 @@
     
 }
 
-@keyframes fadeout{
+@keyframes fadein{
     from{
-        opacity: 1;
+        opacity: 0;
     }
     to{
-        opacity: 0;
+        opacity: 1;
     }
 }
 
 .map{
-    animation: fadeout 5000ms;
+    animation: fadein 5000ms;
     // transition-delay: 5000ms;
     background-image: url(../../assets/map.svg);
     position: absolute;
