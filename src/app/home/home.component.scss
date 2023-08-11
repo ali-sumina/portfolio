@@ -33,6 +33,7 @@
     .space{
         @include startFlex(row, flex-end);
         justify-content: space-between;
+        overflow-x: hidden
     }
     .space-between {
         @include startFlex(row, center);
@@ -226,8 +227,12 @@ app-nav-page{
     }
 
     .padding-zero-nav{
-        padding: 0 !important;
+        // padding: 0 !important;
         overflow-y: hidden;
+    }
+
+    .overflow{
+        overflow-x: hidden;
     }
 
     .space{
