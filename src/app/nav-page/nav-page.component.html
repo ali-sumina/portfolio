@@ -104,8 +104,8 @@
   </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <img src="../../assets/menu-burger.svg" alt="">
-
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="nav-list mt-5">
 
@@ -115,22 +115,32 @@
             </a>
         </li>
 
-        <li class="nav-item accordion-item">
+        <li class="nav-item">
+          <div class="accordion-item">
 
+            <div class="acc-button flex-align">
           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">                    
             <h3>Projects</h3>
             </button>
+
+          <div class="arrow"></div>
+          </div>
 
             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordion" aria-labelledby="panelsStayOpen-headingOne">
               <div class="accordion-body border-bottom panel">
                 <ul class="menu">
                   <li><a class="nav-item" routerLink="/case-studies" [routerLinkActive]="['active']">
-                      <h5>Case Studies</h5>
+                      <h5 class="margin-bottom-12">Case Studies</h5>
                   </a>
               </li>
-                  <li><a class="nav-item" routerLink="/case-studies">
-                      <h5>UI & Web Design</h5>
+                  <li><a class="nav-item" routerLink="web-design">
+                      <h5 class="margin-bottom-12">UI & Web Design</h5>
                   </a>
+              </li>
+                </ul>
+            </div>
+            </div>
+          </div>
               </li>
                   <!-- <li><a class="nav-item" routerLink="/case-studies">
                       <h5>Graphic Design</h5>
@@ -138,13 +148,9 @@
               </li> -->
 
                 </ul>                  
-              </div>
-            </div>
 
-              
-        </li>
-    </ul>
 
+            
     <div class="bottom-part">
       <h4>Contact Me To Hire:</h4>
       <div class="icon-contact mt-3">
@@ -174,10 +180,10 @@
       <!-- Should be downloadable -->
       <button class="btn light-btn mt-5">Download Resume</button>
   </div>
-
-
     </div>
   </div>
+
+
 </nav>
 
 

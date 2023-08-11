@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./romashka-web.component.scss']
 })
 
+// constructor(private environmentService: EnvironmentService) {}
 
 
 export class RomashkaWebComponent implements OnInit {

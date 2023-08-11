@@ -23,6 +23,7 @@
     .space-between {
         @include startFlex(row, center);
         justify-content: space-between;
+        z-index: 1;
         .soc-icons, .socmedia-resume{
             @include basicFlex();
             gap: 44px;
@@ -89,6 +90,7 @@
     background-size: 120%;
     left: 335px;
     bottom: 76px;
+    z-index: 0;
     .point-nav{
 
         .projects{
