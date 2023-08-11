@@ -11,14 +11,19 @@ export class DesignProjsComponent implements OnInit{
 
   projectsList:any;
   serverURL = environment.server;
+  loading = true;
 
   constructor (private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get<any>(this.serverURL + '/api/projects-lists/2?populate=deep').subscribe (res => {
-      // console.log (res)
-      this.projectsList = res;  
-    })
+    setTimeout(() => {
+      this.http.get<any>(this.serverURL + '/api/projects-lists/2?populate=deep').subscribe (res => {
+        this.loading = false;
+        // console.log (res)
+        this.projectsList = res;  
+      })
+    }, 3000)
+
 
   }
 }
