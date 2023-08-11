@@ -75,8 +75,10 @@
     </div>
   
   </div>
+
+  <!-- When not loading -->
   
-  <div class="map hide show-desk" [class]="hideMap">
+  <div class="map hide show-desk" [class]="hideMap" *ngIf="!loading">
     <div class="point-nav">
 
       <h3 class="projects">Projects</h3>
@@ -127,6 +129,62 @@
   </div>
 
   </div>
+
+<!-- When loading -->
+<div class="map hide show-desk" [class]="hideMap" *ngIf="loading">
+  <div class="point-nav">
+
+    <h3 class="projects">Projects</h3>
+
+    <div class="case-studies">
+    <a routerLink="/case-studies" class="point-link">
+      <h5 class="point-text">Case Studies</h5>
+    <div class="point-icon">
+      <img src="../../assets/menu-point.svg" alt="" class="point">
+    </div>
+  </a>
+  </div>
+
+
+    <div class="point-nav">
+      <div class="web-design">
+      <a routerLink="/case-studies" class="point-link">
+        <h5 class="point-text">Web Design</h5>
+      <div class="point-icon">
+        <img src="../../assets/menu-point.svg" alt="" class="point">
+      </div>
+    </a>
+    </div>
+
+
+    <div class="point-nav">
+      <div class="about">
+        <a routerLink="/about" class="point-link">
+      <h5 class="point-text">About Me</h5>
+      <div class="point-icon">
+        <img src="../../assets/menu-point.svg" alt="" class="point">
+      </div>
+    </a>
+    </div>
+
+      <div class="point-nav">
+        <div class="funstuff">
+          <h5 class="point-text mt-3">Travel Plan</h5>
+        <div class="point-icon">
+          <img src="../../assets/menu-point.svg" alt="" class="point">
+        </div>
+        
+      </div>
+
+  </div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
 </div>
   <router-outlet></router-outlet>
   
