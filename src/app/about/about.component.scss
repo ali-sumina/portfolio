@@ -46,6 +46,19 @@
     }
 }
 
+@keyframes fadein{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.fadein{
+    animation: fadein 3000ms;
+}
+
 
 @media screen and (max-width: 562px) {
     .padding-zero {
