@@ -30,8 +30,8 @@ export class AboutComponent implements OnInit {
   constructor(private http:HttpClient){}
    
   ngOnInit(): void {
+    setTimeout(() => {
     this.http.get<About>(this.serverURL + '/api/about?populate=deep').subscribe(res => {
-      setTimeout(() => {
         this.loading = false;
         console.log(res)
         this.about = res;
@@ -56,9 +56,9 @@ export class AboutComponent implements OnInit {
   
         this.devSkills = res.data.attributes.skill_set.data.attributes.web_dev_skill.data.attributes.Skill
         this.devTools = res.data.attributes.skill_set.data.attributes.web_dev_skill.data.attributes.Tool
-      }, 3000)
+      })
 
-    }, )
+    }, 3000)
     
   }
 }
