@@ -21,6 +21,7 @@ export class AboutComponent implements OnInit {
 
 
   serverURL = environment.server;
+  productionEnv = environment.production
   // add work and education attributes for loop
   constructor(private http:HttpClient){}
    
@@ -29,7 +30,15 @@ export class AboutComponent implements OnInit {
       console.log(res)
       this.about = res;
       this.aboutText = res.data.attributes.AboutMe
-      this.headShot = this.serverURL + res.data.attributes.MyHeadshot.data.attributes.formats.medium.url;
+
+      if (this.productionEnv == false) {
+        this.headShot = this.serverURL + res.data.attributes.MyHeadshot.data.attributes.formats.medium.url;
+      } else {
+        this.headShot = res.data.attributes.MyHeadshot.data.attributes.formats.medium.url;
+      }
+      
+
+
       this.positions = res.data.attributes.work_experiences.data
       this.educations = res.data.attributes.educations.data
 
