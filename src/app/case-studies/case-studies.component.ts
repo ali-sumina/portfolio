@@ -14,7 +14,7 @@ export class CaseStudiesComponent implements OnInit {
   constructor (private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get<any>(this.serverURL + '/api/projects-lists/1').subscribe (res => {
+    this.http.get<any>(this.serverURL + '/api/projects-lists/1?populate=deep').subscribe (res => {
       // console.log (res)
       this.projectsList = res;  
     })
