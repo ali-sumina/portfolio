@@ -42,6 +42,12 @@ export class HomeComponent implements OnInit{
       this.email = res.data.attributes.MyEmail;
 
       if (this.productionEnv == false) {
+        this.phoneIcon= this.serverURL + res.data.attributes.PhoneIcon.data.attributes.url;
+      } else {
+        this.phoneIcon = res.data.attributes.PhoneIcon.data.attributes.url;
+      }
+
+      if (this.productionEnv == false) {
         this.emailIcon= this.serverURL + res.data.attributes.EmailIcon.data.attributes.url;
       } else {
         this.emailIcon = res.data.attributes.EmailIcon.data.attributes.url;
