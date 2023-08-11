@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit{
   homeNav = 'show';
   mainNav = 'hide';
   loading = true;
-  hideMap = "visibility: hidden;"
+  hideY = "hideY"
 
   // timeout(){
   //   setTimeout(() => {})
@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit{
     setTimeout(() => {
       this.http.get<NavPage>(this.serverURL + '/api/page-nav?populate=*').subscribe(res => {
         this.loading = false;
-        this.hideMap = '';
+        this.hideY = 'showY';
         console.log(res)
         this.navPage = res
         this.phoneNum = res.data.attributes.PhoneNumber;

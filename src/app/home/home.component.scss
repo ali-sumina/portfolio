@@ -14,7 +14,17 @@
     overflow-y: hidden;
 }
 
+.hideY{
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.showY{
+    overflow-y: visible;
+}
+
 .screen{
+    animation: fadein 3000ms;
     background-image: url(../../assets/bglines.svg);
     padding: 32px;
     height: 100vh;
@@ -93,6 +103,10 @@
     to{
         opacity: 1;
     }
+}
+
+app-nav-page{
+    animation: fadein 3000ms;
 }
 
 .map{

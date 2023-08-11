@@ -103,7 +103,7 @@ $contentFont: Avenir Next;
 
 @mixin small-text ($color){
     color: $color;
-    font-size: 1 rem;
+    font-size: 16px;
     font-family: $contentFont;
     line-height: 160%;
 }
@@ -135,6 +135,7 @@ h5{
 }
 
 .small-text{
+    z-index: 0;
     @include small-text($darkGrey);
     opacity: 0.5;
 }
