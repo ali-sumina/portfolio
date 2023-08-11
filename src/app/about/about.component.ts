@@ -18,6 +18,8 @@ export class AboutComponent implements OnInit {
   UItools:any[] = [];
   UXskills:any[] = []
   UXtools:any[] = []
+  devSkills:any[] = [];
+  devTools:any[] = []
 
 
   serverURL = environment.server;
@@ -44,8 +46,12 @@ export class AboutComponent implements OnInit {
 
       this.UIskills = res.data.attributes.skill_set.data.attributes.ui_skill.data.attributes.Skill
       this.UItools = res.data.attributes.skill_set.data.attributes.ui_skill.data.attributes.Tool
+
       this.UXskills = res.data.attributes.skill_set.data.attributes.ux_skill.data.attributes.Skill
       this.UXtools = res.data.attributes.skill_set.data.attributes.ux_skill.data.attributes.Tool
+
+      this.devSkills = res.data.attributes.skill_set.data.attributes.web_dev_skill.data.attributes.Skill
+      this.devTools = res.data.attributes.skill_set.data.attributes.web_dev_skill.data.attributes.Tool
     })
     
   }

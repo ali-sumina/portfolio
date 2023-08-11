@@ -64,6 +64,20 @@ export interface About {
                                 }
                             }
                         }
+
+                        web_dev_skill: {
+                            data: {
+                                attributes: {
+                                    Skill: [{
+                                        SkillText:string
+                                    }],
+
+                                    Tool: [{
+                                        SkillText: string
+                                    }]
+                                }
+                            }
+                        }
                     }
                 }
             }

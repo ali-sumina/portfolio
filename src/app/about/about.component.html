@@ -107,7 +107,7 @@
                             <div class="work-exp" *ngFor="let UXskill of UXskills">
                                 <div class="position-year">
                                     <div class="position">
-                                        <img src="../../assets/work.svg" alt="" class="work-icon">
+                                        <img src="../../assets/skill.svg" alt="" class="work-icon">
                                         <div class="position-company">
                                         <h5 class="mb-2">{{UXskill.SkillText}}</h5>
                                     </div>
@@ -122,7 +122,7 @@
                             <div class="work-exp" *ngFor="let UXtool of UXtools">
                                 <div class="position-year">
                                     <div class="position">
-                                        <img src="../../assets/edu.svg" alt="" class="work-icon">
+                                        <img src="../../assets/tool.svg" alt="" class="work-icon">
                                         <div class="position-company">
                                         <h5 class="mb-2">{{UXtool.SkillText}}</h5>
                                     </div>
@@ -148,7 +148,7 @@
                             <div class="work-exp" *ngFor="let UIskill of UIskills">
                                 <div class="position-year">
                                     <div class="position">
-                                        <img src="../../assets/work.svg" alt="" class="work-icon">
+                                        <img src="../../assets/skill.svg" alt="" class="work-icon">
                                         <div class="position-company">
                                         <h5 class="mb-2">{{UIskill.SkillText}}</h5>
                                     </div>
@@ -163,7 +163,7 @@
                             <div class="work-exp" *ngFor="let UItool of UItools">
                                 <div class="position-year">
                                     <div class="position">
-                                        <img src="../../assets/edu.svg" alt="" class="work-icon">
+                                        <img src="../../assets/tool.svg" alt="" class="work-icon">
                                         <div class="position-company">
                                         <h5 class="mb-2">{{UItool.SkillText}}</h5>
                                     </div>
@@ -173,11 +173,46 @@
         
                         </div>
                     </div>
+                    <div class="row padding-zero mt-mb-4">
+                        <a routerLink="/case-studies"><button class="btn dark-btn mt-4 py-3 px-5">See Design Projects</button></a>
+                    </div>
                 </div>
 
                 <!-- Web Dev -->
                 <div class="tab-pane fade mb-5" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-                    ...
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <!-- Skills -->
+                            <h3 class="mb-md-5 mb-4 mt-md-1">Skills</h3>
+                            <!-- ngFor -->
+                            <div class="work-exp" *ngFor="let devSkill of devSkills">
+                                <div class="position-year">
+                                    <div class="position">
+                                        <img src="../../assets/skill.svg" alt="" class="work-icon">
+                                        <div class="position-company">
+                                        <h5 class="mb-2">{{devSkill.SkillText}}</h5>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Tools -->
+                            <h3 class="mb-md-5 mb-4 mt-5 mt-md-1">Tools</h3>
+                            <!-- ngFor -->
+                            <div class="work-exp" *ngFor="let devTool of devTools">
+                                <div class="position-year">
+                                    <div class="position">
+                                        <img src="../../assets/tool.svg" alt="" class="work-icon">
+                                        <div class="position-company">
+                                        <h5 class="mb-2">{{devTool.SkillText}}</h5>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
                 </div>
               </div>
 
