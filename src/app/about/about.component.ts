@@ -21,6 +21,8 @@ export class AboutComponent implements OnInit {
   devSkills:any[] = [];
   devTools:any[] = []
 
+  loading = false;
+
 
   serverURL = environment.server;
   productionEnv = environment.production
@@ -29,6 +31,7 @@ export class AboutComponent implements OnInit {
    
   ngOnInit(): void {
     this.http.get<About>(this.serverURL + '/api/about?populate=deep').subscribe(res => {
+      this.loading = false;
       console.log(res)
       this.about = res;
       this.aboutText = res.data.attributes.AboutMe
