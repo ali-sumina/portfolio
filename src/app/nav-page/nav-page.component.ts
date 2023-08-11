@@ -29,28 +29,31 @@ export class NavPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.http.get<NavPage>(this.serverURL + '/api/page-nav?populate=*').subscribe(res => {
-      console.log(res)
-      this.navPage = res
-      this.phoneNum = res.data.attributes.PhoneNumber;
-      this.email = res.data.attributes.MyEmail;
+      setTimeout(() => {
+        this.navPage = res
+        this.phoneNum = res.data.attributes.PhoneNumber;
+        this.email = res.data.attributes.MyEmail;
+  
+        if (this.productionEnv == false) {
+          this.phoneIcon= this.serverURL + res.data.attributes.PhoneIcon.data.attributes.url;
+        } else {
+          this.phoneIcon = res.data.attributes.PhoneIcon.data.attributes.url;
+        }
+        // this.phoneIcon = res.data.attributes.PhoneIcon.data.attributes.url;
+  
+        if (this.productionEnv == false) {
+          this.emailIcon= this.serverURL + res.data.attributes.EmailIcon.data.attributes.url;
+        } else {
+          this.emailIcon = res.data.attributes.EmailIcon.data.attributes.url;
+        }
+        // this.emailIcon = res.data.attributes.EmailIcon.data.attributes.url;
+        this.instaIcon = res.data.attributes.InstagramIcon.data.attributes.url;
+        this.behanceIcon = res.data.attributes.BehanceIcon.data.attributes.url;
+        this.linkedinIcon = res.data.attributes.LinkedinIcon.data.attributes.url;
+        this.logo = res.data.attributes.Logo.data.attributes.url;
+      })
+      // console.log(res)
 
-      if (this.productionEnv == false) {
-        this.phoneIcon= this.serverURL + res.data.attributes.PhoneIcon.data.attributes.url;
-      } else {
-        this.phoneIcon = res.data.attributes.PhoneIcon.data.attributes.url;
-      }
-      // this.phoneIcon = res.data.attributes.PhoneIcon.data.attributes.url;
-
-      if (this.productionEnv == false) {
-        this.emailIcon= this.serverURL + res.data.attributes.EmailIcon.data.attributes.url;
-      } else {
-        this.emailIcon = res.data.attributes.EmailIcon.data.attributes.url;
-      }
-      // this.emailIcon = res.data.attributes.EmailIcon.data.attributes.url;
-      this.instaIcon = res.data.attributes.InstagramIcon.data.attributes.url;
-      this.behanceIcon = res.data.attributes.BehanceIcon.data.attributes.url;
-      this.linkedinIcon = res.data.attributes.LinkedinIcon.data.attributes.url;
-      this.logo = res.data.attributes.Logo.data.attributes.url;
     })
   }
 
