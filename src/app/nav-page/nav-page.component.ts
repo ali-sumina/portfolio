@@ -23,6 +23,8 @@ export class NavPageComponent implements OnInit {
   serverURL = environment.server;
   productionEnv = environment.production
 
+  loading = true;
+
 
 
   constructor (private http:HttpClient) {}
@@ -30,6 +32,7 @@ export class NavPageComponent implements OnInit {
   ngOnInit(): void {
     this.http.get<NavPage>(this.serverURL + '/api/page-nav?populate=*').subscribe(res => {
       setTimeout(() => {
+        this.loading = false;
         this.navPage = res
         this.phoneNum = res.data.attributes.PhoneNumber;
         this.email = res.data.attributes.MyEmail;
