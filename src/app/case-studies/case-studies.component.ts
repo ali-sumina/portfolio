@@ -21,7 +21,7 @@ export class CaseStudiesComponent implements OnInit {
         this.loading = false;
         this.projectsList = res;  
       })
-    }, 5000)
+    }, 3000)
     
 
 
