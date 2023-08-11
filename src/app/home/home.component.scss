@@ -82,8 +82,18 @@
     
 }
 
+@keyframes fadeout{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
 .map{
-    transition-delay: 5000ms;
+    animation: fadeout 5000ms;
+    // transition-delay: 5000ms;
     background-image: url(../../assets/map.svg);
     position: absolute;
     height: 913px;
