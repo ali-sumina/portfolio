@@ -4,11 +4,11 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { CaseStudiesComponent } from './case-studies/case-studies.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { ContactsComponent } from './contacts/contacts.component';
+// import { ContactsComponent } from './contacts/contacts.component';
 import { ProjectComponent } from './project/project.component';
-import { CasestudyTemplateComponent } from './casestudy-template/casestudy-template.component';
-import { RomashkaWebComponent } from './romashka-web/romashka-web.component';
-import { InProgressComponent } from './in-progress/in-progress.component';
+// import { CasestudyTemplateComponent } from './casestudy-template/casestudy-template.component';
+// import { RomashkaWebComponent } from './romashka-web/romashka-web.component';
+// import { InProgressComponent } from './in-progress/in-progress.component';
 import { DesignProjsComponent } from './design-projs/design-projs.component';
 import { GraphicProjsComponent } from './graphic-projs/graphic-projs.component';
 
