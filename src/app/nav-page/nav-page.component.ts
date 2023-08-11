@@ -42,9 +42,9 @@ export class NavPageComponent implements OnInit {
       // this.phoneIcon = res.data.attributes.PhoneIcon.data.attributes.url;
 
       if (this.productionEnv == false) {
-        this.emailIcon= this.serverURL + res.data.attributes.PhoneIcon.data.attributes.url;
+        this.emailIcon= this.serverURL + res.data.attributes.EmailIcon.data.attributes.url;
       } else {
-        this.emailIcon = res.data.attributes.PhoneIcon.data.attributes.url;
+        this.emailIcon = res.data.attributes.EmailIcon.data.attributes.url;
       }
       // this.emailIcon = res.data.attributes.EmailIcon.data.attributes.url;
       this.instaIcon = res.data.attributes.InstagramIcon.data.attributes.url;
