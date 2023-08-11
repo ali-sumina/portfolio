@@ -21,7 +21,7 @@ export class AboutComponent implements OnInit {
   devSkills:any[] = [];
   devTools:any[] = []
 
-  loading = false;
+  loading = true;
 
 
   serverURL = environment.server;

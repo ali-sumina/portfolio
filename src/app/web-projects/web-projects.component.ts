@@ -17,15 +17,12 @@ export class WebProjectsComponent implements OnInit{
   localHost:string = 'http://localhost:1337'
   serverURL = environment.server;
 
-  loading = true;
-
   constructor (private http: HttpClient) {}
 
 
   ngOnInit(): void {
 
     this.http.get<Projects>(this.serverURL + '/api/projects-lists/2?populate=deep').subscribe (res => {
-      this.loading = false;
       console.log (res)
       this.projects = res.data.attributes.projects.data;
     // throw new Error('Method not implemented.');
