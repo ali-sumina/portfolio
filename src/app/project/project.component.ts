@@ -25,6 +25,13 @@ export class ProjectComponent implements OnInit {
     this.http.get<Projects>(this.serverURL + '/api/projects-lists/1?populate=deep').subscribe (res => {
       console.log (res)
       this.projects = res.data.attributes.projects.data;
+
+      // if (this.productionEnv == false) {
+      //   this.headShot = this.serverURL + res.data.attributes.MyHeadshot.data.attributes.formats.medium.url;
+      // } else {
+      //   this.headShot = res.data.attributes.MyHeadshot.data.attributes.formats.medium.url;
+      // }
+
       // this.projectTitle = ;
       // this.projectDesc = res.data.;
       // this.projectImg = '' + res.data;
