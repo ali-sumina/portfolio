@@ -260,6 +260,8 @@ app-nav-page{
         background-color: #ffffff00 !important;
         padding: 0 12px !important;
         max-height: 820px !important;
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
     }
 
     .border-bottom{
