@@ -16,6 +16,7 @@ export class ProjectComponent implements OnInit {
   projectDesc: string = "attributes.ProjectImage.data.attributes.formats.medium.url";
   localHost:string = 'http://localhost:1337'
   serverURL = environment.server;
+  productionEnv = environment.production
 
   constructor (private http: HttpClient) {}
 
