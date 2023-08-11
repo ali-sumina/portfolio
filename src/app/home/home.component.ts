@@ -28,9 +28,9 @@ export class HomeComponent implements OnInit{
   mainNav = 'hide';
   loading = true;
 
-  timeout(){
-    setTimeout(() => {})
-  }
+  // timeout(){
+  //   setTimeout(() => {})
+  // }
 
 
   constructor (private http:HttpClient) {}

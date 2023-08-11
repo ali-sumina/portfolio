@@ -8,12 +8,12 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ProjectComponent } from './project/project.component';
 // import { CasestudyTemplateComponent } from './casestudy-template/casestudy-template.component';
 // import { RomashkaWebComponent } from './romashka-web/romashka-web.component';
-// import { InProgressComponent } from './in-progress/in-progress.component';
+import { InProgressComponent } from './in-progress/in-progress.component';
 import { DesignProjsComponent } from './design-projs/design-projs.component';
 import { GraphicProjsComponent } from './graphic-projs/graphic-projs.component';
 
 const routes: Routes = [
-  // {path: 'progress', component: InProgressComponent},
+  {path: 'progress', component: InProgressComponent},
   {path: '', component: HomeComponent},
   {path: 'about', component: AboutComponent},
   {path: 'case-studies', component: CaseStudiesComponent},
