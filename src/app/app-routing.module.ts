@@ -13,16 +13,16 @@ import { DesignProjsComponent } from './design-projs/design-projs.component';
 import { GraphicProjsComponent } from './graphic-projs/graphic-projs.component';
 
 const routes: Routes = [
-  {path: '', component: InProgressComponent},
-  {path: 'home', component: HomeComponent},
+  // {path: 'progress', component: InProgressComponent},
+  {path: '', component: HomeComponent},
   {path: 'about', component: AboutComponent},
   {path: 'case-studies', component: CaseStudiesComponent},
   {path: 'web-design', component: DesignProjsComponent},
   {path: 'projects', component: ProjectsComponent},
-  {path: 'contacts', component: ContactsComponent},
+  // {path: 'contacts', component: ContactsComponent},
   {path: 'project', component: ProjectComponent},
-  {path: 'biogeek', component: CasestudyTemplateComponent},
-  {path: 'romashka', component: RomashkaWebComponent},
+  // {path: 'biogeek', component: CasestudyTemplateComponent},
+  // {path: 'romashka', component: RomashkaWebComponent},
   {path: 'graphic-design', component: GraphicProjsComponent}
 ];
 
