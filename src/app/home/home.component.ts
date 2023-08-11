@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit{
   homeNav = 'show';
   mainNav = 'hide';
   loading = true;
+  hideMap = "display: none"
 
   // timeout(){
   //   setTimeout(() => {})
@@ -38,6 +39,7 @@ export class HomeComponent implements OnInit{
   ngOnInit(): void {
     this.http.get<NavPage>(this.serverURL + '/api/page-nav?populate=*').subscribe(res => {
       this.loading = false;
+      this.hideMap = ''
       console.log(res)
       this.navPage = res
       this.phoneNum = res.data.attributes.PhoneNumber;
