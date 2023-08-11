@@ -21,6 +21,8 @@ export class AboutComponent implements OnInit {
   devSkills:any[] = [];
   devTools:any[] = []
 
+  hide = "display: none"
+
   loading = true;
 
 
@@ -33,6 +35,7 @@ export class AboutComponent implements OnInit {
     setTimeout(() => {
     this.http.get<About>(this.serverURL + '/api/about?populate=deep').subscribe(res => {
         this.loading = false;
+        this.hide = '';
         console.log(res)
         this.about = res;
         this.aboutText = res.data.attributes.AboutMe
