@@ -3,8 +3,9 @@
     {{ headShot }}
 </p> -->
 
-<app-in-progress class="hide-bottom" *ngIf="loading"></app-in-progress>
-<div class="container-fluid" [class]="hide">
+
+<div class="container-fluid">
+    <app-in-progress class="hide-bottom" *ngIf="loading"></app-in-progress>
     <div class="row">
         <div class="col-md-3 fixed padding-zero">
             <app-nav-page></app-nav-page>
