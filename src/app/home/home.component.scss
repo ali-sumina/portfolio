@@ -10,6 +10,10 @@
     display: block;
 }
 
+.hide-bottom{
+    overflow-y: hidden;
+}
+
 .screen{
     background-image: url(../../assets/bglines.svg);
     padding: 32px;
