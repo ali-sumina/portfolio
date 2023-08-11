@@ -11,10 +11,16 @@
             </div>
 
         </div>
-        <div class="col-12 col-md-6 img padding-zero">
+        <div class="col-12 col-md-6 img padding-zero" *ngIf="productionEnv">
             <img class="imgClass" src="{{project.attributes.ProjectImage.data.attributes.formats.medium.url}}" alt="">
             <!-- img -->
         </div>
+
+        <div class="col-12 col-md-6 img padding-zero" *ngIf="!productionEnv">
+            <img class="imgClass" src="{{serverURL + project.attributes.ProjectImage.data.attributes.formats.medium.url}}" alt="">
+            <!-- img -->
+        </div>
+
         <div class="row hide show-mob padding-zero">
             <a href="{{project.attributes.ProjectLink}}"><button class="btn dark-btn mt-3 py-3 px-5">See Project</button></a>
         </div>
