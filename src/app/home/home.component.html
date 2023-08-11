@@ -2,8 +2,9 @@
 <!-- Write a condition to hide page nav -->
 
 <app-nav-page class="hide-desk show"></app-nav-page>
+<app-in-progress *ngIf="loading"></app-in-progress>
 
-<div class="container-fluid screen padding-zero" [class]="homeNav" >
+<div class="container-fluid screen padding-zero" [class]="homeNav">
     <div class="row hide">
       <div class="space-between">
       <div class="img-container">
@@ -59,12 +60,14 @@
                 <img class="nav-icon" src="../../assets/phone.svg" alt="">
                 <p class="content">{{phoneNum}}</p>
             </div>
+            <p class="small-text mt-4">&copy; 2023 Alexandra Sumina. All rights reserved</p>
         </div>
       </div>
         <div class="signage hide">
           <img src="../../assets/menu-point.svg" alt="" class="point">
           <p class="content">– hover to explore my website world</p>
         </div>
+
 
         
       

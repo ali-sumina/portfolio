@@ -1,10 +1,11 @@
 <div class="container-fluid">
+    <app-in-progress *ngIf="loading"></app-in-progress>
     <div class="row">
-        <div class="col-12 col-md-3 fixed padding-zero">
+        <div class="col-12 col-md-3 fixed padding-zero mb-5">
             <app-nav-page></app-nav-page>
         </div>
         <div class="col-md-3"></div>
-        <div class="col-12 col-md-9">
+        <div class="col-12 col-md-9 mb-5">
             <div class="container margin-60" >
                 <!-- LOOP THIS ROW -->
                 <div class="row margin-from-nav">

@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit{
   localHost:string = 'http://localhost:1337';
   homeNav = 'show';
   mainNav = 'hide';
+  loading = true;
 
 
 
@@ -36,6 +37,7 @@ export class HomeComponent implements OnInit{
 
   ngOnInit(): void {
     this.http.get<NavPage>(this.serverURL + '/api/page-nav?populate=*').subscribe(res => {
+      this.loading = false;
       console.log(res)
       this.navPage = res
       this.phoneNum = res.data.attributes.PhoneNumber;
