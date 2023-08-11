@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit{
   homeNav = 'show';
   mainNav = 'hide';
   loading = true;
-  hideMap = "display: none"
+  hideMap = "display: none;"
 
   // timeout(){
   //   setTimeout(() => {})
