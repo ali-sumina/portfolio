@@ -39,6 +39,11 @@ app-in-progress{
     gap: 32px;
 }
 
+.small-text{
+    position: relative;
+    z-index: -1000;
+}
+
 .nav-tabs{
     --bs-nav-tabs-border-width: 0px;
     border-bottom: $border;

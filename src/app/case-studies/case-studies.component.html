@@ -1,5 +1,5 @@
 <app-in-progress *ngIf="loading"></app-in-progress>
-<div class="container-fluid">
+<div class="container-fluid" *ngIf="!loading">
     <div class="row">
         <div class="col-12 col-md-3 fixed padding-zero mb-5">
             <app-nav-page></app-nav-page>

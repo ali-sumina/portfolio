@@ -63,7 +63,7 @@ export class HomeComponent implements OnInit{
         this.linkedinIcon = res.data.attributes.LinkedinIcon.data.attributes.url;
         this.logo = res.data.attributes.Logo.data.attributes.url;
       })
-    }, 3000)
+    }, 1000)
 
   }
 
