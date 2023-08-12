@@ -36,19 +36,19 @@
     }
 }
 
-.nav-title::after{
-    content: '';
-    display: block;
-    height: 4px;
-    width: 0;
-    // padding-bottom: 8px;
-    background: $darkGrey;
-    transition: width .3s;
-}
+// .nav-title::after{
+//     content: '';
+//     display: block;
+//     height: 4px;
+//     width: 0;
+//     // padding-bottom: 8px;
+//     background: $darkGrey;
+//     transition: width .3s;
+// }
 
-.nav-title:hover::after{
-    width: 100%;
-}
+// .nav-title:hover::after{
+//     width: 100%;
+// }
 
 .navbar{
 --bs-navbar-toggler-border-color: 0px solid grey !important;
