@@ -17,6 +17,9 @@ export class HomeComponent implements OnInit{
   navPage:any;
   phoneNum:string = '';
   email:string = '';
+  behanceLink = ''
+  linkedinLink = '';
+  instagramLink = '';
   phoneIcon:string = '';
   emailIcon:string = '';
   instaIcon:string = '';
@@ -45,6 +48,9 @@ export class HomeComponent implements OnInit{
         this.navPage = res
         this.phoneNum = res.data.attributes.PhoneNumber;
         this.email = res.data.attributes.MyEmail;
+        this.behanceLink = res.data.attributes.BehanceLink;
+        this.linkedinLink = res.data.attributes.LinkedinLink;
+        this.instagramLink = res.data.attributes.InstagramLink;
   
         if (this.productionEnv == false) {
           this.phoneIcon= this.serverURL + res.data.attributes.PhoneIcon.data.attributes.url;
@@ -63,7 +69,7 @@ export class HomeComponent implements OnInit{
         this.linkedinIcon = res.data.attributes.LinkedinIcon.data.attributes.url;
         this.logo = res.data.attributes.Logo.data.attributes.url;
       })
-    }, 1000)
+    }, 1500)
 
   }
 

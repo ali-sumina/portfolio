@@ -115,6 +115,7 @@ app-nav-page{
     // transition-delay: 5000ms;
     background-image: url(../../assets/map.svg);
     position: absolute;
+    z-index: 0;
     height: 913px;
     width: 1230px;
     background-size: 120%;
@@ -130,9 +131,10 @@ app-nav-page{
         }
         
         .case-studies{
-            position: relative;
-            top: 426px;
-            right: 70px;
+            position: absolute;
+            z-index: 4;
+            top: 486px;
+            right: 602px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -144,9 +146,10 @@ app-nav-page{
         }
 
         .web-design{
-            position: relative;
-            top: 410px;
-            left: 171px;
+            position: absolute;
+            z-index: 3;
+            top: 450px;
+            left: 724px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -162,9 +165,10 @@ app-nav-page{
 
 
         .about{
-            position: relative;
-            top: 484px;
-            left: 386px;
+            position: absolute;
+            z-index: 2;
+            top: 655px;
+            left: 954px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -176,9 +180,10 @@ app-nav-page{
 
         }
         .funstuff{
-            position: relative;
-            top: 557px;
-            right: 73px;
+            position: absolute;
+            z-index: 1;
+            top: 805px;
+            right: 631px;
             display: flex;
         flex-direction: column;
         align-items: center;
@@ -193,20 +198,94 @@ app-nav-page{
     }
 }
 
-.point-link:hover{
-    .point-text{
-        font-family: $florenceBlack;
-        font-size: 24px;
+
+@keyframes underline {
+    from {
+        content: '';
+        display: block;
+        width: 0;
+        padding-bottom: 4px;
+        height: 4px;
+        background: $darkGrey;
+        transition: width;
     }
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes opacity {
+    from{
+        opacity: 0.8;
+    }
+    to{
+        opacity: 0.3;
+    }
+    to {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes scale {
+    from {
+        transform: scale(0.9);
+    }
+    to{
+        transform: scale(1);
+    }
+    
+}
+
+.case-studies:hover{
+    transform: translateX(14px);
+}
+
+.web-design:hover{
+    transform: translateX(-14px);
+}
+
+.about:hover{
+    transform: translateX(-10px);
+}
+
+    .point-link:hover{
+
+
+        // position: fixed;
+
+
+        .point-text{
+            transition: center;
+            font-size: 24px;
+            text-decoration:solid;
+            animation: scale 1000ms;
+            }
+
     .point-icon{
         background-image: url(../../assets/point-hover.svg);
         background-size: cover;
+        // animation: fadeout;
+        animation: opacity 1000ms;
+        animation: scale 1000ms;
         .point{
             visibility: hidden;
         }
     }
+    }
+
     
-}
 
 
 

@@ -3,6 +3,9 @@ export interface NavPage {
         attributes: {
             PhoneNumber: string;
             MyEmail: string;
+            LinkedinLink: string;
+            BehanceLink: string;
+            InstagramLink: string;
             PhoneIcon: {
                 data: {
                     attributes: {

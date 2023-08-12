@@ -17,10 +17,22 @@
   
       <div class="socmedia-resume">
         <div class="soc-icons">
+          <a href="{{linkedinLink}}" target="_blank" class="soc-link">
+              <img src="../../assets/linkedin.svg" alt="" class="soc-icon">
+          </a>
+          <a href="{{behanceLink}}" target="_blank" class="soc-link">
+              <img src="../../assets/behance.svg" alt="" class="soc-icon">
+          </a>
+          <a href="{{instagramLink}}" target="_blank" class="soc-link">
+              <img src="../../assets/instagram.svg" alt="" class="soc-icon">
+          </a>
+
+      </div>
+        <!-- <div class="soc-icons">
           <img src="../assets/linkedin.svg" alt="" class="soc-icon">
           <img src="../assets/behance.svg" alt="" class="soc-icon">
           <img src="../assets/instagram.svg" alt="" class="soc-icon">
-        </div>
+        </div> -->
         <a href="https://drive.google.com/file/d/12hhvldMy7z6XIjIFn6Wa2uLZiQ7gOv71/view?usp=sharing"><button class="btn light-btn" style="z-index: 3;">Download Resume</button></a>
       </div>
       </div>
@@ -52,16 +64,21 @@
 
           <div class="bottom-part">
             <h4 class="pb-2">Contact Me To Hire:</h4>
-            <div class="icon-contact">
-                <!-- STRAPI! Loop this info -->
-                <img class="nav-icon" src="../../assets/mail.svg" alt="">
-                <p class="content">{{email}}</p>
-            </div>
-            <div class="icon-contact">
-                <!-- STRAPI! Loop this info -->
-                <img class="nav-icon" src="../../assets/phone.svg" alt="">
-                <p class="content">{{phoneNum}}</p>
-            </div>
+            <a href="mailto:aarichyan@gmail.com">
+              <div class="icon-contact mt-3">
+                  <!-- STRAPI! Loop this info -->
+                  <img class="nav-icon" src="../../assets/mail.svg" alt="">
+                  <p class="content">{{email}}</p>
+              </div>
+            </a>
+              <a href="tel:+12362348149">
+              <div class="icon-contact mt-3">
+                  <!-- STRAPI! Loop this info -->
+                  
+                  <img class="nav-icon" src="../../assets/phone.svg" alt="">
+                  <p class="content">{{phoneNum}}</p>
+              </div>
+            </a>
             <p class="small-text mt-4 mb-4 mb-md-1">&copy; 2023 Alexandra Sumina. All rights reserved</p>
         </div>
       </div>

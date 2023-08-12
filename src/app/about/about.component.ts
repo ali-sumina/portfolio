@@ -61,7 +61,7 @@ export class AboutComponent implements OnInit {
         this.devTools = res.data.attributes.skill_set.data.attributes.web_dev_skill.data.attributes.Tool
       })
 
-    }, 1000)
+    }, 1500)
     
   }
 }

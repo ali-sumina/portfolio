@@ -22,7 +22,7 @@ export class DesignProjsComponent implements OnInit{
         // console.log (res)
         this.projectsList = res;  
       })
-    }, 1000)
+    }, 1500)
 
 
   }
